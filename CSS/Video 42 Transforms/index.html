@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: beige;
+            border: 2px solid black;
+            transform: rotate(40deg);   
+            /* below 0.25turn mean 90 deg */
+            /* transform: rotate(0.125turn);  */
+            /* transform: rotateX(46deg); */
+            /* transform: rotateY(96deg); */
+            /* transform: rotateZ(16deg); */
+            /* transform: scale(1.2); */
+            /* transform: scaleX(1.3); */
+            /* transform: scaleY(1.3); */
+            /* transform: scale3d(1.25, 2.25, 0.25); */
+            /* transform: skew(9deg); */
+            /* transform: skewY(20deg); */
+            /* transform: skewX(20deg); */
+            /* transform: skew;   z-axis ma nai hota */
+            /* transform: translate(50px); */
+            /* transform: translateX(50px); */
+            /* transform: translateY(50px); */
+            /* when we apply multiple transform properties in a single line  */
+            /* transform: translateY(50%) skew(18deg) translate(17%); */
+            transform-origin: 0% 0%;
+
+            display: flex;
+            justify-content: center;
+             align-items: center;
+}
+        
+        .container{
+            margin: 30px;
+            width: 99vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="box">Box</div>
+        </div>
+</body>
+</html>

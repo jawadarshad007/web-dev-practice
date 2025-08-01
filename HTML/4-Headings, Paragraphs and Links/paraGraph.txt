@@ -1,0 +1,25 @@
+The <hr> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+
+The <hr> element is used to separate content (or define a change) in an HTML page:
+The <hr> tag is an empty tag, which means that it has no end tag
+
+
+
+The HTML <pre> element defines preformatted text.
+
+The text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+
+
+
+
+
+Tag	Description
+<p>	Defines a paragraph
+<hr>	Defines a thematic change in the content
+<br>	Inserts a single line break
+<pre>	Defines pre-formatted text
+
+
+
+
+

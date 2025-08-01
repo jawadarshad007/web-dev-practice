@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Flexbox</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* horizontally center */
+            /* justify-contect see main axis to center */
+            /* justify-content: center; */
+            /* vertically center */
+            align-items: center;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            flex-wrap: wrap;
+            /* when we have content more than 1 line we use align-content*/
+            /* align-content: center; */
+            /* ...there is no justify items in flexbox... */
+            /*Syntax---- flex-flow: flex-direction    flex-wrap */
+            flex-flow: row wrap  ;
+            /* gap: 20px; */
+            /* row-gap: 20px; */
+            /* column-gap: 10px; */
+            /* short code of gap of row and column */
+            gap: 20px 10px;
+
+
+        }
+        .item{
+            /* flex-box:1; mean flexbox ki jitne space ha is ma sare items full space lhn gye aik jitne */
+            /* flex-grow: 1; */
+            width: 92px;
+            height: 92px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            /* margin: 4px; */
+        }
+        .item-1{
+            /* flex-grow: 2; */
+            /* ability of flex item to shrink if necssary  */
+            flex-shrink: 2;
+            align-self: flex-end;
+        }
+        
+        /* jis ka Jitna zaida order ho ga wo itna last ma ayye ga
+        default order 0 hot ha */
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+
+        .item p {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+   <main>
+    <div class="container">
+        <div class="item item-1"><p>1</p></div>
+        <div class="item order-2"><p>2</p></div>
+        <div class="item"><p>3</p></div>
+        <div class="item order-1"><p>4</p></div>
+        <div class="item order-3"><p>5</p></div>
+        <div class="item"></div>
+        <div class="item"><p>Last</p></div>
+       
+    </div>
+   </main>
+</body>
+</html>

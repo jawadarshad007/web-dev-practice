@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Grid-1</title>
+    <style>
+      .container {
+        width: 80vw;
+        height: 100vh;
+        border: 2px solid red;
+        display: grid;
+        /* grid-template-columns:[pehla] 120px [dosara]300px [tesara];
+            grid-template-rows: [pehla]100px [dosara]100px [tesara]100px; */
+        /* grid-template-columns: 1fr 2fr 4fr; */
+        /*way to read below line-- 4 dfa repart kro 1fr ko  */
+        /* grid-template-columns: repeat(4 , 1fr); */
+        /* grid-template-columns: repeat(4 , minmax(100px , 1fr)); */
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: 1fr 1fr 1fr;
+        /* grid or flexBox ma padding use nai krne gap use krna ha */
+        /* row-gap: 10px;
+            column-gap: 44px; */
+        /* or */
+        gap: 10px 44px;
+        justify-items: center;
+        align-items: center;
+      }
+      .items {
+        border: 2px solid blueviolet;
+        height: 55px;
+        width: 55px;
+      }
+      .item-4 {
+        /* grid-row-start: 1;
+            grid-row-end: 2; */
+        /* or */
+        /* grid-row: 3/4; */
+
+        /* grid-column-start: 2;
+            grid-column-end: 3; */
+        /* or */
+        /* grid-column: dosara/tesara; */
+      }
+      .item-1 {
+        /* grid-row-start: 1;
+            grid-row-end: 2; */
+        /* or */
+        /* grid-row: 2/3; */
+
+        /* grid-column-start: 2;
+            grid-column-end: 3; */
+        /* or */
+        /* grid-column: 2/3; */
+        /* align-self: self-start; */
+        /* justify-self: end; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items item-1">1</div>
+      <div class="items">2</div>
+      <div class="items">3</div>
+      <div class="items item-4">4</div>
+      <div class="items">5</div>
+    </div>
+  </body>
+</html>
+
+"AsssalamoAlikum bhai! app sa aik help chaiya thi Pakistan IT Industry sa
+related , Ma 5th Semester BS Software Engineering UMT university Lahore ka
+student hn, app sa pounchna ya tha ka fori graduation ka bad axhi job lane ka
+lia muje apne free time ma kis chz par zaida foucs krna chaiya , skill par (Web
+Development) ya programming par jasie ka PF,OOP,DSA,DB . Because muje elam nai
+ha Job interview ma PF,OOP,DSA,DB sa wo swal krte hn ya pir Apki skill sa
+related , wase abi meri PF,OOP,DSA,DB koi khas axhi nai ha , isee lia muje fikar
+ka ma abi sa preparation start kr dhn , university ka sath sath free time ma aik
+hi chz par foucs hoga ya to web Development par yaa PF,OOP, DSA,Db. Plz muje
+axhi trah guide kr dhn,app ka bth bth sukria." 
+
+
+
+
+
+**Original Message in IT Industry
+Theme (Simplified and Structured):** "Assalamu Alaikum Bhai! Mujhe Pakistan ki
+IT industry ke baare mein thodi guidance chahiye. Main UMT Lahore mein BS
+Software Engineering ka 5th semester ka student hoon. Aap se yeh poochhna tha ke
+graduation ke baad achhi job pane ke liye mujhe apne free time mein kis cheez
+par zyada focus karna chahiye: 1. **Skills:** Jaise ke Web Development, ya 2.
+**Programming Concepts:** Jaise PF, OOP, DSA, DB. Abhi tak meri PF, OOP, DSA,
+aur DB par zyada command nahi hai. Mujhe samajh nahi aa raha ke job interviews
+mein in cheezon ke zyada sawal hote hain ya phir aapki practical skills (like
+Web Development) ko judge kiya jata hai. Is liye mein abhi se apni preparation
+shuru karna chahta hoon. Aap mujhe guide karein ke university ke sath sath mujhe
+apna focus koi ek cheez (ya to Web Development ya Programming Concepts) par
+karna chahiye. Aapki madad aur guidance ka intezaar rahega. Bohot shukriya!"
+
+
+
+
+
+**Simple and Easy English Version:** "Assalamu Alaikum Bhai! I need some
+guidance about the IT industry in Pakistan. I am a 5th-semester BS Software
+Engineering student at UMT Lahore. I wanted to ask what I should focus on during
+my free time to get a good job after graduation: 1. **Skills** like Web
+Development, or 2. **Programming Concepts** like PF, OOP, DSA, and DB. Right
+now, I don’t have a strong command over PF, OOP, DSA, or DB. I am confused about
+whether job interviews focus more on these concepts or on practical skills like
+Web Development. That’s why I want to start preparing now. Please guide me on
+whether I should focus on just one thing—either Web Development or Programming
+Concepts—alongside my university studies. I will be very grateful for your help
+and advice. Thank you!"

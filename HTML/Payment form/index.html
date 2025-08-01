@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment-form</title>
+</head>
+<body>
+    <h1>Payment-form</h1>
+    <h2>Contact Information</h2>
+    <p>Required fields are followed by *</p>
+    <div>
+        <label for="name">Name:*</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <fieldset>
+        <legend>Gender *</legend>
+    <div>
+        
+        <input type="radio" id="male" name="Gender" value="male" required>
+        <label for="male">Male</label>
+    </div>
+    <div>
+        
+        <input type="radio" id="female" name="Gender" value="female" required>
+        <label for="female">Female</label>
+    </div>
+    </fieldset>
+    <div>
+        <label for="address">Address</label>
+        <br>
+        <textarea name="address" id="address" cols="60" rows="5"></textarea>
+    </div>
+    <div>
+        <label for="email">Email *</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div>
+        <label for="pincode">Pincode *</label>
+        <input type="number" name="pincode" id="pincode" required>
+    </div>
+    <h2>Payment Information</h2>
+    <p>Card Type: *
+    <select name="card" id="card" required>
+        <option value="">--Select a card type--</option>
+        <option value="Master card">Master Card</option>
+        <option value="Visa card">Visa Card</option>
+    </select>
+    </p>
+    <div>
+        <label for="card number">Card Number *</label>
+        <input type="number" name="card number" id="card number" required>
+    </div>
+    <div>
+        <label for="exp date">Expiration Date *</label>
+        <input type="date" name="exp date" id="exp date" required>
+    </div>
+    <div>
+        <label for="card pin">Card Pin *</label>
+        <input type="password" name="card pin" id="card pin" required>
+    </div>
+    <input type="submit" value="Pay Now">
+</body>
+</html>

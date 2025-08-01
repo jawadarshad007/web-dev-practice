@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Quries</title>
+    <style>
+        body{
+            background-color: rgb(241, 80, 80);
+        }
+        div:first-child{
+            color: white;
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            width: 344px;
+            height: 134px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: steelblue;
+        }
+       /* landscape = where width is greater than height
+    potrait= where height is greater than width */
+    @media screen and (orientation: landscape) {
+        body{
+            border: 15px solid purple;
+        }
+    }
+    
+        /* @media not|only mediatype and (expressions) 
+        CSS-Code;
+        */
+        @media only screen and (max-width:500px){
+            body{
+                background-color: blue;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+            .box{
+                width: 50px;
+                height: 10px;
+            }
+    }
+    
+    </style>
+</head>
+<body>
+    <div>
+        hello i am red body guy
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

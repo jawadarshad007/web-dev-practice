@@ -1,0 +1,9 @@
+Summary of Lecture 21 yt
+1. Cascade: Many selector are used to style a single element and css solve this conflict by Cascade.
+2. Cascade Algorithm : It determine which property of CSS will be applied in Element. The cascade algorithm has 4 distinct stages.
+3. Position and order of appearance : If same selector, then last one will be used
+4. Origin: authored CSS has priority
+5. Important: When !important It has highest priority. 
+6. Specificity: Selector with high specificity is applied to html element.
+7. Order of Specificity: Inline Style > ID selector > Class or Attribute  selector > Element Selector > Universal Selector
+8. Calculating Specificity: Value of Each Selector: Universal is 0, 1 for each element selector or pseudo-element, 10 for each class value (or pseudo-class or attribute selector), 100 for each ID value. Inline Style has 1000 specificity. Just add value to find specificity.

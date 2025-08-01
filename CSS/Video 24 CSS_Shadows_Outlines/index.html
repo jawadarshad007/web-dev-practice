@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadows/Outlines</title>
+    <style>
+      .box {
+        border: 2px solid aqua;
+        padding: 34px;
+        /* syntax of a Box-shadow */
+        /* box-shadow: h-offset v-offset blur spread color inset; */
+        box-shadow: 5px 5px 15px 5px #888888;
+      }
+      .text-shadow {
+        margin-top: 50px;
+        /* sytax of a text-shadow 
+        text-shadow: h-offset v-offset blur color; */
+        text-shadow: 2px 2px 4px #ea0d0d;
+        /* syntax of outlines are as follow
+        outline: colour style width; */
+        outline: aqua solid 3px;
+        border: 2px solid blue;
+        border-radius: 20px;
+        outline-offset: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">hi,I am a Box</div>
+    <p class="text-shadow">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro aperiam
+      natus itaque repellendus voluptates aut ab, impedit dolore exercitationem
+      quas?
+    </p>
+  </body>
+</html>

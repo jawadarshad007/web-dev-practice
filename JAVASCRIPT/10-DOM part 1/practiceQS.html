@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice...</title>
+</head>
+<body>
+    <div id="firstdiv">Hello</div>
+    <button onclick="addtext()">Click Here for Surprise</button>
+    <div class="box">1st</div>
+    <div class="box">2nd</div>
+    <div class="box">3rd</div>
+    <script>
+        function addtext() {
+            const element = document.querySelector("#firstdiv").innerText += " Fuck You !"
+            // element.innerText +=    "World";   
+        }
+        let first = document.querySelectorAll(".box")
+        first[0].innerText += " Some in first"
+        console.dir(first)
+    </script>
+</body>
+</html>

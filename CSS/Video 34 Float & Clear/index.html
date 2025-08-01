@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float & Clear</title>
+    <style>
+      .cards {
+        border: 2px solid black;
+        display: flow-root;
+      }
+      .card {
+        border: 2px solid red;
+      }
+      img {
+        float: right;
+      }
+      /* jo card 3eesra child ha is pa ya properties apply kr do. */
+      .card:nth-child(3){
+        background-color: aqua;
+        clear: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <img
+        width="230px"
+        src="https://cdn.pixabay.com/photo/2020/08/11/03/08/boat-5479122_1280.jpg"
+        alt=""
+      />
+      <div class="card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          accusamus molestiae alias qui quos dolor voluptatum, ut soluta
+          explicabo labore omnis architecto iste. Id iusto beatae, cum aut
+          maiores odit aliquam enim harum excepturi.
+        </p>
+      </div>
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+        fugit fugiat suscipit maxime dolorem necessitatibus quibusdam at
+        voluptas aliquid nam rerum exercitationem minima, ut deleniti libero
+        excepturi, autem fuga maiores dicta tempore, assumenda error similique
+        placeat harum? Esse autem debitis inventore quos a libero deleniti,
+        maiores explicabo eaque minima excepturi voluptatibus maxime ducimus
+        perferendis asperiores, magnam sit. Et adipisci quaerat error
+        exercitationem harum? Rerum doloremque quae molestiae officia magni
+        corporis quia non accusantium architecto repellendus voluptatem, dolorum
+        explicabo tenetur facere ullam vero consectetur optio esse consequatur
+        repudiandae. Harum ipsa mollitia magnam deleniti, vitae, recusandae
+        explicabo error fuga nesciunt aut tenetur repudiandae. Id, accusantium
+        error. A, corrupti harum? At, laborum minus. Quia, qui. Error corporis
+        pariatur modi illo, quas sunt numquam similique voluptates saepe
+        voluptatum quibusdam repudiandae maiores explicabo veritatis nam
+        architecto praesentium esse provident. Molestias, dolore eius. Corrupti
+        distinctio ullam ex in unde dolor, quam dicta repudiandae quas. Est
+        iusto eum voluptatum? Iste accusamus consectetur facilis excepturi
+        dignissimos! Ducimus, laudantium? Cumque repellat voluptates eum alias
+        tempora dolorum quisquam ut. Officiis atque ipsa consectetur repellat
+        tempore sapiente. Nisi suscipit enim dicta officia voluptates qui
+        excepturi libero fugit aut consequatur. Mollitia necessitatibus, officia
+        accusamus dolor ratione, vero quaerat neque facilis consequatur
+        explicabo non quisquam laudantium odio inventore qui quibusdam eveniet
+        dolore fugit doloremque illum minus. Soluta laboriosam, ab voluptatem,
+        aspernatur quod repudiandae deleniti beatae amet iusto sapiente minima
+       
+      </div>
+      <div class="card">Card 3</div>
+    </div>
+  </body>
+</html>

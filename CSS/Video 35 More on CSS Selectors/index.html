@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> More on CSS Selectors</title>
+    <style>
+        /* ya box jahn apne parent ka first child ha whan ya properties apply kr do */
+        .box:first-child{
+            background-color: aquamarine;
+        }
+        .boxes *{
+            color: blue;
+            border: 2px solid black ;
+        }
+        /* attributes selectors */
+       /* [data-color="primary"]{
+            margin-top: 80px;
+            padding-top: 40px;
+        } */
+         /* grouping selectors */
+            /* p, a, .box , [data-color="primary"]{
+                margin-top: 80px;
+                padding-top: 40px;
+            } */
+             /* .box:nth-child(even){
+                background-color: rgb(144, 97, 188)    ;
+             } */
+              .box:nth-last-child(1){
+                background-color: bisque;
+              }
+              /* these below are sudo elements */
+              .boxes::before{
+               content: "I am new content before" ;  
+               color: green;
+              }
+              .boxes::after{
+               content: "I am new content after" ;  
+               color: rgb(128, 0, 255);
+              }
+              ::selection{
+                background-color: black  ;
+                color: aqua;
+              }
+              .box::first-letter{
+                color: peru;
+                font-size: 30px;
+              }
+              input::placeholder{
+                color: rgb(114, 105, 114);
+              }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary"  class="box">Hy I am box 1</div>
+        <div class="box">Hy I am box 2</div>
+        <div class="box">Hy I am box 3</div>
+        <input type="text" placeholder="Your Name...">
+    </div>
+</body>
+</html>

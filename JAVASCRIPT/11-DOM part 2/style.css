@@ -1,0 +1,18 @@
+#box{
+    height: 90px;
+    width: 120px;
+    text-align: center  ;
+    border: 2px solid black;
+    color: white;
+    background-color: cadetblue;
+
+}
+.New{
+    background-color: goldenrod;
+    font-weight:bolder;
+    color: floralwhite;
+}
+
+.addition{
+    background-color: green ;
+}

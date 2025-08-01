@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transtion</title>
+    <style>
+        .container{
+            background-color: blueviolet;
+            width: 50vw;
+            height: 40vh;
+            
+        }
+        .box{
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+           
+            /* transition-property: transform , background-color ;
+            transition-duration: 1s ;
+            transition-timing-function: Out · Back ;
+            transition-delay: 1s; */
+            /* apply all these 4 properties in sigle line */
+            /* transition: transform , background-color  3s ease-in-out  1s; */
+        }
+        /* .translate{
+            transform: translateX(10vw) translateY(10vh);
+            background-color: blue;
+            scale: 1.5;
+        } */
+        /* .box:hover{
+            cursor: pointer;
+            height: 30px;
+            transition: height 2s cubic-bezier(0.54, 0.24, 0.2, 1) ; */
+            /* transition: height 2s emphasized ; */
+        /* } */
+        .box:hover{
+            cursor: pointer;
+            width: 150px;
+            text-align: center;
+            transform: translateX(10vw) translateY(10vh);
+            transition: transform 2s cubic-bezier(0.95,-0.59, 0.07, 1) ;
+            /* transition: height 2s emphasized ; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">Jawad</div>
+    </div>
+</body>
+</html>

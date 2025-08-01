@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-7</title>
+    <style>
+        .body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+                /* width: 950px;
+                height: 90vh; */
+            /* border: 2px solid black; */
+            gap: 20px;
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+        
+        }
+        .items{
+            width: 300px;
+            height: 200px;
+            background-color: rgba(189, 184, 184, 0.517);
+            /* border: 2px solid black; */
+        }
+        .item-1  p{
+            /* padding-top: 50px; */
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-2 p {
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-3 p {
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-4 p {
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-5 p{
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-6 p{
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-7 p{
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-8 p{
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-9 p{
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-10 p{
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .item-1 a{
+           background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-2 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-3 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-4 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-5 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-6 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-7 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-8 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-9 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        .item-10 a{
+            background-color: #5CB85C;
+           display: inline-block;
+           padding: 8px;
+          text-align: center;
+          text-decoration: none;
+           cursor: pointer;
+           width: 130px;
+           /* height: 30px; */
+           border-radius: 7px;
+           /* text-align: center; */
+           margin-top: 50px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        span{
+            display:block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="body">
+
+        <div class="container">
+            <div class="items item-1">
+            <p>English</p> 
+            <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+            <br>
+                <span>
+                    SHA256
+                </span>
+                    <span> 3C783C0872319DE70343C2 </span>
+                   <span> D42190AAD8C </span>
+
+            </div>
+            <div class="items item-2">
+                <p>Deutsch</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-3">
+                <p>Italiano</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-4">
+                <p>Español</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-5">
+                <p>français</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-6">
+                <p>Português brasileiro</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-7">
+                <p>Italiano</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-8">
+                <p>Italiano</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-9">
+                <p>Italiano</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+            <div class="items item-10">
+                <p>Italiano</p> 
+                <a href="mids of Sem5th.txt" download="mids of Sem5th.txt" class="button">Download 64-bit</a>
+                <br>
+                    <span>
+                        SHA256
+                    </span>
+                        <span> 3C783C0872319DE70343C2 </span>
+                       <span> D42190AAD8C </span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

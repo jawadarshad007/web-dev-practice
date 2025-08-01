@@ -1,0 +1,9 @@
+Key points in this lecture:
+1. fr means fraction - helps in distributing grids evenly.
+2. repeat saves time in setting fractions.
+3. minmax functions helps in adjusting cell width and height with minimum and maximum set values.
+4. align-self, justify-self, justify-items, align-items works within grid cells.
+5. "justify-content", "align-content" works within the entire grid container, "place-content" does both of their jobs in one go.
+6. "justify" arranges items around the main axis and "align" arranges the items around cross axis.
+7. Use "gap" instead of "padding" in grid or flex.
+8. Lastly always try to use "start" and "end" rather than "flex-start" or "flex-end".

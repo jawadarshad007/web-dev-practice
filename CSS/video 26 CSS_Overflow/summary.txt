@@ -1,0 +1,30 @@
+summery:
+CSS Overflow: content that is too large for an elements box, 
+                          CSS overflow property can be used to modify how overflow is handled.
+
+Property:
+
+1) overflow: visible;   // (default property) overflow content is visible.
+
+2) overflow: scroll;   // Scrollbar always visible even content not overflow the box.
+
+3) overflow: auto;   // If content overflow the box, scrollbar automatically visible or created.
+
+4) overflow: clip;  // No scroll bar, even content overflow. overflow content not visible (same as overflow:scroll property).
+
+//** doubt - what is the programmatically scroll?
+
+5)  white-space: nowrap; //content only in single line (in x axis only), so we can scroll horizontally only. 
+
+6) text-overflow: ellipsis;  //content only in single line (in x axis only), overflow text will not visible, overflow text denoted by  ... (three dots) . 
+
+7) overflow-x: hidden
+overflow-y: scroll   //  scrollbar in x and y direction as per requirement.
+
+=>Shorten for overflow x and overflow y
+
+overflow: hidden scroll
+
+**doubt- in my case (overflow-x: scroll; overflow-y: hidden;) not working
+
+#SigmaBatchOP

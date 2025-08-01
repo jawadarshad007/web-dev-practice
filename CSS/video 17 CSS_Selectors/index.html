@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Selectors</title>
+    <style>
+        /* elemet selector */
+        /* div{
+            background-color: aqua;
+        } */
+         /* class selector */
+        .red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+        /* (Direct) child selector */
+        div > p {
+            color: rgb(21, 14, 234);
+            background-color: chartreuse;
+        }
+        /* Desendent selector */
+        /* div ka andr khin bhi P hoa to folowing properties apply kr do */
+        div  p {
+            color: rgb(21, 14, 234);
+            background-color: chartreuse;
+        }
+        /* universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* psuedo selector */
+        a:visited{
+            color: crimson;
+        }
+        a:link{
+            color: green;
+        }
+        a:active{
+            background-color: blue;
+        }
+        a:hover{
+            background-color: brown;
+        }
+        p:first-child{
+            background-color: burlywood;
+        }
+        input:active{
+            transform: scale(0.94);
+        }
+    </style> 
+</head>
+<body>
+    <main class="one">
+        <p>i am 1st P</p>
+        <p>i am 2nd P</p>
+    </main>
+    <div class="red">
+        I am a Div
+        <article>
+        <p>
+            i am paragraph in div
+        </p>
+    </article>
+    </div>
+    <div id="green">
+        I am another Div
+    </div>
+    
+    <a href="https://www.youtube.com/">Go to Youtube</a>
+    <a href="https://www.Facebook2.com/">Go to Facebook</a>
+    <br>
+    <input type="button" value="Click Me">
+</body>
+</html>

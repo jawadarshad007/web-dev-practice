@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sizing Units</title>
+    <style>
+        html{
+            font-size: 12px;
+        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid black;
+        width: 80vw;
+        height: 10vh;
+        /* margin-auto only works in block elements */
+        margin: auto;
+        box-sizing: border-box;
+      }
+      .container {
+        border: 2px solid black;
+        width: 80vw;
+        /* height: 80vh; */
+        min-height: 80vh;
+        /* margin-auto only works in block elements */
+        margin: 20px auto;
+        box-sizing: border-box;
+        font-size: 32px;
+      }
+      .container > div{
+        font-size: 2rem; 
+        width: 50%;
+        border: 2px solid red;
+      }
+      .container > div > div {
+        border: 2px solid blue;
+       width: 50%;
+      }
+      .concept{
+        border: 2px solid aqua;
+        color: rgb(6, 6, 6);
+        font-size: 32px;
+        margin: 23px auto;
+        /* width: 100vmin; */
+        width: 80vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">hi , i am a BOX</div>
+    <div class="container">
+        <div>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolorum
+            pariatur, ad ipsam animi mollitia iusto. Obcaecati quaerat vitae corrupti
+            cum numquam ullam dolore repudiandae? Obcaecati iste ipsam impedit placeat
+            <div>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga magnam eaque commodi nulla officia, odit atque voluptas perferendis dolorem sunt, totam repellendus omnis quasi dolorum new?
+            </div>
+          </div>
+      
+        
+    </div>
+    <div class="concept">
+        I am just for learing
+        
+    </div>
+  </body>
+</html>

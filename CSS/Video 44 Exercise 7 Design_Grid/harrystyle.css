@@ -1,0 +1,147 @@
+:root {
+    --primary-color: rgb(187, 154, 154);
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo {
+    align-self: flex-end;
+  }
+  .logo:hover {
+    cursor: pointer;
+  }
+  .items {
+    width: 66vw;
+    list-style-type: none;
+    display: flex;
+    gap: 55px;
+    justify-content: center;
+    color: rgb(61, 60, 60);
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .items li {
+    display: flex;
+    align-items: center;
+  }
+  .items li span {
+    padding: 0px 5px;
+  }
+  .item-1:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  .item-2:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  .item-3:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  .item-4:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  .item-5:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  .search:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-family: sans-serif;
+    padding: 50px;
+  }
+  .first span {
+    font-size: 40px;
+  }
+  section span img {
+    width: 112px;
+    margin: 0 23px;
+  }
+  .first p {
+    font-size: 20px;
+    width: 51vw;
+    text-align: center;
+  }
+  .btn {
+    background-color: rgb(0, 182, 209);
+    padding: 12px 22px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 900;
+    font-size: 14px;
+    margin: 7px 0;
+    cursor: pointer;
+  }
+  .btn a {
+    text-decoration: none;
+    color: white;
+  }
+  .Green {
+    background-color: rgb(92, 184, 92);
+  }
+  .download {
+    display: flex;
+  }
+  .small {
+    font-size: 14.4px;
+  }
+  .second {
+   max-width: 50vw;
+   margin: auto;
+  }
+  .itemsSecond{
+    padding: 23px;
+    background-color: rgb(249,249,249);
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  .item-lang{
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 36px;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .download img{
+   width: 55px;
+   height: 55px;
+  }
+  .download{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: sans-serif;
+  }
+  .download :nth-child(2){
+    font-size: 23px;
+  }
+  @media screen and (max-width: 1145px) {
+    .grid{
+    grid-template-columns: 1fr;
+  }
+  }
+
+  @media (max-width: 1000px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    
+    }
+}

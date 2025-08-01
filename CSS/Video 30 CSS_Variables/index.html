@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <!-- CSS variables, also known as custom properties, can store various types of values that you might use in CSS, including: -->
+    <style>
+      /* inside root there always a global variable */
+      :root {
+        --color: rgb(45, 45, 232);
+        --seccolor: rgb(83, 83, 199);
+        --forborders: rgb(238, 92, 39);
+        --padding: 40px;
+        --opacity: 0.5;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        display: flex;
+      }
+      ul li {
+        opacity: var(--opacity);
+        list-style: none;
+        padding: var(--padding);
+        border: 2px solid var(--forborders);
+        color: wheat;
+      }
+      ul li:first-child {
+        /* here it is a loca, varaible  */
+        --color: rgb(49, 188, 239);
+        background-color: var(--color);
+      }
+      .nav {
+        background-color: var(--color);
+      }
+      .container {
+        background-color: var(--seccolor);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="container">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. In odit commodi,
+      accusamus esse impedit amet non nemo rerum reiciendis modi aut dolore
+      ipsam quis corporis, dignissimos quas enim nostrum quaerat praesentium
+      dolorem aspernatur, consequatur mollitia illum ab. Veritatis quis non
+      excepturi obcaecati provident. Eveniet, harum!
+    </div>
+  </body>
+</html>
