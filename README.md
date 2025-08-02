@@ -4,9 +4,9 @@ This repository contains my daily practice work as I learn the MERN Full Stack D
 
 ## 📁 Folder Structure
 Web-dev-practice/  
-├── HTML/ 
-├── CSS/ 
-└── JAVASCRIPT/ 
+├── HTML
+├── CSS 
+└── JAVASCRIPT 
 
 
 
