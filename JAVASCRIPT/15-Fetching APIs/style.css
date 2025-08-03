@@ -1,0 +1,17 @@
+#btn {
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #232526, #414345);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(30, 32, 38, 0.5);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#btn:hover {
+    background: linear-gradient(90deg, #414345, #232526);
+    transform: translateY(-2px) scale(1.04);
+}
