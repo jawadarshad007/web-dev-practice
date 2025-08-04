@@ -16,14 +16,6 @@ This is a simple and responsive **Currency Converter** web app that allows users
 - JavaScript (ES6+)
 - Fetch API
 
-## 📂 Project Structure
-
-Currency-Converter/
-├── index.html
-├── style.css
-└── script.js
-
-
 
 ## 📸 Preview
 
