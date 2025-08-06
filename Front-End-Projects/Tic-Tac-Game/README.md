@@ -25,7 +25,7 @@ This is a simple **Tic-Tac-Toe** (also called Noughts and Crosses) game built us
 
 ## 📸 Preview
 
-```markdown
+
 ![Game Preview](ui.png)
 
 ---
