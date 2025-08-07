@@ -22,6 +22,7 @@ This is a simple Weather App built with **HTML**, **CSS**, and **JavaScript** th
 - HTML
 - CSS
 - JavaScript (Fetch API)
+- Bootstrap 5
 - OpenWeatherMap API
 
 ## 📁 Folder Structure
