@@ -38,23 +38,27 @@ Weather-App/
 
 ## 📌 How to Use
 
-1. Clone the repo:
+1. **Clone the repo:**
    ```bash
    git clone https://github.com/jawadarshad007/web-dev-practice.git
+   ```
 
-2.  Navigate:
+2. **Navigate to the project folder:**
    ```bash
-    cd Front-End-Projects/Weather-App
+   cd web-dev-practice/Front-End-Projects/Weather-App
+   ```
 
-3.  Open index.html in your browser.
+3. **Open the project:**
+   - Open `index.html` in your browser to view the app.
 
+---
 
 ## 📌 Note
 
-This project is part of the **Front-End Projects** section in my learning path while mastering **MERN Stack Development**.
+This project is part of the **Front-End Projects** section in my learning path while mastering **Full Stack Development (MERN Stack)**.
 
 ---
 
 ## 📬 Contact
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/jawad-arshad-81773830a/)
+Connect with me on [**LinkedIn**](https://www.linkedin.com/in/jawad-arshad-81773830a/)
