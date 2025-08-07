@@ -1,6 +1,6 @@
 # Weather App 🌦️
 
-This is a simple Weather App built with **HTML**, **CSS**, and **JavaScript** that fetches real-time weather data using the **OpenWeatherMap API**.
+This is a simple Weather App built with **HTML**, **CSS**, **Bootstrap**, and **JavaScript** that fetches real-time weather data using the **OpenWeatherMap API**.
 
 ## 🚀 Features
 
