@@ -1,6 +1,5 @@
-if (i<0) {
-    //     break;
-    // }
-    // else{
-    //     sum += arr[i];
-    // }
+function filterProducts(products, criterion) {
+//     return products.filter((products)=>{
+//         return products.category === criterion;
+//     })
+// }

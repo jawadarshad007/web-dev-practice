@@ -1,0 +1,63 @@
+<!-- // Problem 12 
+// The Token Manager: You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Token Manager Demo</title>
+</head>
+<body>
+  <h2>Token Manager Example</h2>
+
+  <button onclick="saveToken()">Save Token</button>
+  <button onclick="checkToken()">Check Token</button>
+  <p id="output"></p>
+
+  <script>
+    // Save token with expiration
+    function setAuthToken(token) {
+      const expiresIn = 60 * 60 * 1000; // 1 hour in milliseconds
+      const expirationTime = Date.now() + expiresIn;
+
+      localStorage.setItem("authToken", token);
+      localStorage.setItem("authTokenExpiration", expirationTime);
+    }
+
+    // Get token if valid, otherwise null
+    function getAuthToken() {
+      const token = localStorage.getItem("authToken");
+      const expiration = localStorage.getItem("authTokenExpiration");
+
+      if (!token || !expiration) {
+        return null;
+      }
+
+      if (Date.now() > parseInt(expiration)) {
+        // Token expired → remove it
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("authTokenExpiration");
+        return null;
+      }
+
+      return token; // still valid
+    }
+
+    // Demo: Save token
+    function saveToken() {
+      setAuthToken("mySecretToken123");
+      document.getElementById("output").innerText = "Token saved for 1 hour!";
+    }
+
+    // Demo: Check token
+    function checkToken() {
+      const token = getAuthToken();
+      if (token) {
+        document.getElementById("output").innerText = "Valid Token: " + token;
+      } else {
+        document.getElementById("output").innerText = "No valid token found.";
+      }
+    }
+  </script>
+</body>
+</html>

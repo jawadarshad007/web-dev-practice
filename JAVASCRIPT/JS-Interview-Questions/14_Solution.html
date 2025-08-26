@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll to Top</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .content {
+            height: 200vh;
+            background: linear-gradient(to bottom, #ff6b6b, #4ecdc4);
+            padding: 20px;
+            color: white;
+        }
+
+        #scroll-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        #scroll-button:hover {
+            background: #0056b3;
+        }
+
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Smooth Scroll Demo</h1>
+        <p>This is the top of the page!</p>
+
+        <div class="section">
+            <h2>Section 1</h2>
+            <p>Scroll down to see more content...</p>
+        </div>
+
+        <div class="section">
+            <h2>Section 2</h2>
+            <p>Keep scrolling...</p>
+        </div>
+
+        <div class="section">
+            <h2>Section 3</h2>
+            <p>Almost there...</p>
+        </div>
+
+        <div class="section">
+            <h2>Section 4</h2>
+            <p>This is near the bottom. Click the button to scroll back to top smoothly!</p>
+        </div>
+    </div>
+    <button id="scroll-button">
+        ↑ Top
+    </button>
+
+    <script>
+        function smoothScrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        document.getElementById("scroll-button").onclick = smoothScrollToTop;
+    </script>
+</body>
+
+</html>
