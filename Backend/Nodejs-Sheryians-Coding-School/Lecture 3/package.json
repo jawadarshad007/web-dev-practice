@@ -1,0 +1,19 @@
+{
+  "name": "lecture-3",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js",
+    "myscript": "echo \"This is demo script\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "accessibility": "^5.1.2",
+    "chalk": "^4.1.2",
+    "one-liner-joke": "^1.2.2"
+  }
+}
