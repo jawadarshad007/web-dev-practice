@@ -1,0 +1,6 @@
+Initialize project with npm
+Express Install
+Setting up parser for form
+Setting up EJS(Embedded JavaScript) for ejs pages
+Setting up public static files
+Dynamic Routing  => How to get data coming from frontend  at backend route
