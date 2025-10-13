@@ -11,7 +11,7 @@ for (let Selects of dropdownSelects) {
     let newOption = document.createElement('option');
     newOption.innerText = currcode;
     newOption.value = currcode;
-    if (Selects.name === "from" && currcode === "USD") {
+    if (Selects.name === "from" && currcode === "USD") {    
         newOption.selected = true;
         }
         else if (Selects.name === "to" && currcode === "PKR") {
@@ -38,9 +38,9 @@ if (amountValue === "" || isNaN(amountValue) || Number(amountValue) <= 0) {
     let response = await fetch(URL);
     let data = await response.json();
 
-    // Extract the exchange rate like this:
+    
     let rate = data[fromCurrency][toCurrency];
-    console.log(`${amountValue} ${fromCurrency.toUpperCase()} = ${rate} ${toCurrency.toUpperCase()}`);
+    // console.log(`${amountValue} ${fromCurrency.toUpperCase()} = ${rate} ${toCurrency.toUpperCase()}`);
 
     let convertedAmount = amountValue * rate
     msg.innerText = `${amountValue} ${fromCurrency.toUpperCase()} = ${convertedAmount.toFixed(2)} ${toCurrency.toUpperCase()}`;    
@@ -57,8 +57,82 @@ const updateFlag = (element)=> {
 btn.addEventListener('click',  (event) => {
     event.preventDefault();
     updateExchangeRate();   
-})
+})                                    
 
 window.addEventListener('load', () => {
     updateExchangeRate();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

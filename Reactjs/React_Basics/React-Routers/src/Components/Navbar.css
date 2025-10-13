@@ -1,0 +1,31 @@
+/* ul {
+  color: white;
+}
+
+ul a {
+  color: inherit;
+  text-decoration: none;
+} */
+ul {
+  list-style-type: none;
+  background-color: #949285;
+  display: flex;
+  gap: 40px;
+  padding: 12px;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.active-link {
+  border: 2px solid green;
+}
