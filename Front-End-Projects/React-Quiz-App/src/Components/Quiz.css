@@ -1,0 +1,75 @@
+.Container{
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    margin-top: 100px;
+    gap: 20px;
+    padding: 30px 40PX;
+    justify-content: center;
+    border-radius: 2%;
+}
+.Container hr{
+    height: 2px;
+    border: none;
+    background: #707070;
+}
+.Container h2{
+    font-weight: 500;
+    font-size: 27px;
+}
+.Container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+.Container ul li {
+    list-style: none;
+    display: flex;  
+    border: 2px solid #686868;
+    padding: 15px;
+    /* gap: 20px; */
+    /* margin: 15px; */
+    border-radius: 8px;
+    /* margin-bott  om: 20px; */
+    cursor: pointer;
+    font-size: 20px;
+}
+.Container  button{
+    margin: auto;
+    width: 130px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #553f9a;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+}
+.Container  button:hover{
+    background-color: #3e2c6d;
+}
+.Container .index{
+    font-size: 20px;
+    font-weight: 500;
+    color: #707070;
+    margin: auto;
+}
+.Container .correct{
+    background: #dffff2;
+    border-color: #00d397;
+}
+.Container  .wrong{
+    background: #FFEBEB;
+    border-color: #FF4A4A;
+}
+.welcomeScreen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}

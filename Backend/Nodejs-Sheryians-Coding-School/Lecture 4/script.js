@@ -5,6 +5,19 @@
 // manages everything from recieving a request to sending a response
 
 
+// Express.js ek backend web framework hai jo Node.js par chalta hai.
+// Iska main kaam hai:
+// Web server banana
+// Routes handle karna (like /home, /about, etc.)
+// APIs banana (for frontend to get/send data)
+// So basically:
+// Node.js = Base
+// Express.js = Easy tools to build servers & APIs
+
+
+
+
+
 // Setting up a basic Express.js server
 import express from 'express'
 const app = express()

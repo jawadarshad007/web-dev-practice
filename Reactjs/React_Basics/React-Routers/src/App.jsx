@@ -10,6 +10,7 @@ import Courses from './Components/Courses'
 import MoctTest from './Components/MoctTest'
 import Reports from './Components/Reports'
 import PageNotFound from './Components/PageNotFound'
+import Products from './Components/Products/Products'
 
 
 const router = createBrowserRouter(
@@ -54,6 +55,13 @@ const router = createBrowserRouter(
         element: <div>
         <Navbar/>
         <Params/>
+        </div>
+      },
+      {
+        path: '/products',
+        element:<div>
+          <Navbar/>
+          <Products/>
         </div>
       },
       // path:"*": it runs when no route matches as you mentioned above.

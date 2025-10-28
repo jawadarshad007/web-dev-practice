@@ -100,6 +100,19 @@ fs.readFile("newExample.txt", "utf8" ,(err, data) => {
 // })
 
 
+
+//     fs.rmdir()
+// ✅ Kaam: Empty folder delete karta hai.
+// (⚠️ If folder me files hain, error dega.)
+fs.rmdir("del", (err)=>{
+    if(err) console.error(err);
+    else console.log("Empty directory deleted successfully");       
+})
+
+
+
+
+
 // readdir means read the content of the folder
 fs.readdir("./demo" , (err, files) => {
     if (err) console.error(err);

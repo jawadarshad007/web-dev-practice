@@ -1,0 +1,7 @@
+Collection , document in db
+
+
+Code 
+moongoes.connect       >>>>>>>>>            Create database
+model create           >>>>>>>>>            Collection                     
+CREATE Code                >>>>>>>>>            document                     

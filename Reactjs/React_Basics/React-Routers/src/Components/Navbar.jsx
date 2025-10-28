@@ -30,6 +30,11 @@ const Navbar = () => {
                 return isActive? "active-link" : ""
             }}>Dashboard</NavLink>
         </li>
+        <li>
+            <NavLink to="/products" className={({isActive})=>{
+                return isActive? "active-link" : ""
+            }}>Get Products</NavLink>
+        </li>
       </ul>
     </div>
   )

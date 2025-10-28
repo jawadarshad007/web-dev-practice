@@ -1,0 +1,32 @@
+    prop driling   qs in interview
+    global state managemnet
+    redux
+    create context
+    context api 
+    useContext hook
+
+send data child to parent 
+    data get from api and shows on multiple components with useContext dont use props
+
+
+
+    assignment 
+    make light , dark made by useContext api
+
+
+
+
+
+
+
+
+
+
+
+
+    useContext
+        1. create context
+        2. provide
+        3. consume
+The Context API = all three steps together.
+The useContext hook = only the 3rd step.

@@ -1,0 +1,19 @@
+#data{
+   display: inline-block;
+    margin: 20px;
+    border: 1px solid red;
+    padding: 5px;
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+button{
+    background-color: rgb(88, 88, 231);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
