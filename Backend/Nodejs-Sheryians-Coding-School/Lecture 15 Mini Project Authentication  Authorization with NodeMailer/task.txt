@@ -1,0 +1,11 @@
+Create a user account
+     setup mongoose
+     schema
+     model
+     userCreate => password->hash
+     jwt token -> Cookie 
+
+
+
+Login 
+    recived token =>decrypt  -> than we get email

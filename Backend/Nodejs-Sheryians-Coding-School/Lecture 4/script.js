@@ -47,7 +47,10 @@ app.get("/profile" , (req, res, next) => {
     return next(new Error("This is an error from profile page"))
 })
 
-// error handler
+
+
+//        error handling middleware
+// ➡️ Jab bhi error throw hota hai ya next(err) call hota hai, Express sab normal middleware skip karke sirf yeh error-handling middleware chalata hai.
 app.use((err, req, res, next) => {
   console.error(err.stack)
   res.status(500).send('Something broke!')
