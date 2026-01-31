@@ -1,22 +1,62 @@
-# 🌐 Web Dev Practice
+# Web Dev Practice
 
-This repository contains my daily practice work as I learn the MERN Full Stack Development.
+A comprehensive repository for practicing **Web Development** concepts and projects. This repo contains experiments, mini-projects, and notes that track my learning journey in frontend and backend technologies.
 
-## 📁 Folder Structure
-Web-dev-practice/  
-├── HTML
-├── CSS 
-└── JAVASCRIPT 
+## 🚀 Purpose
+- Strengthen core web development skills
+- Maintain a consistent practice routine
+- Document progress and share learning publicly on GitHub
 
+## 🛠️ Technologies & Topics Covered
+- **HTML5** – Structure of web pages
+- **CSS3** – Styling, layouts, responsive design
+- **JavaScript (ES6+)** – Logic, DOM manipulation, events
+- **React.js** – Frontend framework basics and mini-projects
+- **Tailwind CSS** – Utility-first CSS framework
+- **Backend Concepts** – Basic backend theory notes
+- **Git & GitHub** – Version control and project management
 
+> More advanced topics will be added progressively.
 
-> Backend (Node.js, Express, MongoDB) will be added soon as I progress.
+## 📁 Repository Structure
+```
+web-dev-practice/
+│── Backend/                # Backend theory notes and experiments
+│── CSS/                    # CSS practice files
+│── Front-End-Projects/     # Mini front-end projects
+│── HTML/                   # HTML practice files
+│── JAVASCRIPT/             # JS practice files and theory notes
+│── Reactjs/                # React projects and practice
+│   └── React_Basics/       # Basic React apps
+│── Tailwind CSS/           # Tailwind CSS practice files
+│── README.md               # This file
+``` 
 
-## 🚀 Run Locally
-Clone the repo and open with Live Server in VS Code:  
-`git clone https://github.com/jawadarshad007/Web-dev-practice.git`
+## 📌 Current Level
+**Beginner → Intermediate**  
+Focused on mastering frontend fundamentals while exploring backend basics.
 
-## 👨‍💻 About Me
-Software Engineering (Final Year) Student | Learning MERN Stack Development  
-📎 GitHub: [@jawadarshad007](https://github.com/jawadarshad007)  
-📎 LinkedIn: [Jawad Arshad](https://www.linkedin.com/in/jawad-arshad-81773830a/)
+## 🎯 Goals
+- Write clean, maintainable, and functional code
+- Deepen understanding of web technologies
+- Build small to medium-sized projects
+- Prepare for full-stack development challenges
+
+## 🧠 How to Use This Repo
+- Explore folders by technology
+- Open files in your editor or browser
+- Practice by modifying and experimenting with the code
+- Commit your changes regularly for learning and tracking
+
+## 📈 Progress
+This repository is **updated regularly** as I learn new concepts and enhance existing projects.
+
+## 🤝 Contributions
+This is primarily a personal learning repo. Feedback, suggestions, and collaboration are welcome.
+
+## 📄 License
+This project is open-source under the **MIT License**.
+
+---
+
+⭐ If you’re learning web development too, feel free to explore and practice along with me!
