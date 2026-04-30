@@ -1,10 +1,10 @@
-const profile = {
-        username: "Shradha" ,
-        posts: 156, 
-        isfollow: true,
-        bio: "kuch bhi"
-    };
-    console.log(Object.keys(profile)) //just keys
-    console.log(Object.values(profile)) // just values
-    console.log(Object.entries(profile)) //print both
-    console.log(profile);
+const sym = Symbol("id")
+const user3 = {
+    name: "Bob",
+    age: 25,
+    0 : 100,
+    4: 500,
+    [sym]:"this is symbol"
+}
+console.log(user3[0])
+console.log(user3[sym])

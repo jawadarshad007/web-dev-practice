@@ -1,3 +1,5 @@
-let m= "helololo";
-console.log(m.replace("lo","she")) // replace only one time
-console.log(m.replaceAll("lo","she")) // replace multiple times
+
+let names = "Jawad, Arshad, Ali, Ahmed"
+let arr = names.split(",") // it split the string into array by using separator
+console.log(arr) // it split the string into array by using separator 
+console.log(arr[1]) // it split the string into array by using separator 
