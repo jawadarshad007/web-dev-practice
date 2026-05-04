@@ -5,6 +5,10 @@
 It is a global object with lots of properties & methods */
 
 
+
+//document is a property of window object and it represents the HTML document in form of object that is displayed in that window.
+console.log(document)
+
 /* We access all elements of HTML in JavaScript ---all elements of HTML convert to object in JavaScrpit and this 
 special object is called DOM(Document object model) */
 // why we use it?
@@ -32,6 +36,8 @@ let variable =  document.getElementById("Hello");
 console.dir(variable);
 
 
+
+
 /* how i change text in html class using javaScript. 
  Select all elements with the class name "cl"
 const elements = document.getElementsByClassName("cl");
@@ -42,13 +48,21 @@ for (let i = 0; i < elements.length; i++) {
 }
 */
 
-// it returns html collections like arrays
+// it returns html collections like arrays(not complete array) but we can access it by index and also we can loop through it
 let a =  document.getElementsByClassName("cl")
+// convert it to complete array
+let arr = [...a]
+console.log(arr);
 console.dir(a)
 console.log(a)
 
 let parahs =document.getElementsByTagName("p");
 console.dir(parahs);
+
+
+
+// to insert an id to an element
+a[0].id = "newId"
 
 // agr in sab(getElementsByClass,id,tagName) ko aik sath use krna ho to hm modern level pa querySelector use krte hn
 // syntax
@@ -102,3 +116,5 @@ console.dir(div3)
 // textContent this even hidden element content
 let heading = document.querySelector("h1").textContent;
 console.dir(heading)
+
+del
