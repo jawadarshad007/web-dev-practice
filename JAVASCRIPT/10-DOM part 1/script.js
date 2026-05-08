@@ -13,6 +13,7 @@ console.log(document)
 special object is called DOM(Document object model) */
 // why we use it?
 /*When code is uploaded to servers, and later we want to change our HTML and CSS files, we use the **DOM** to make changes to the website at runtime. */
+// and DOM sa hm Dynamic , Runtime pr changing krte hn 
 console.log("hello")
 window.console.log("hello22222")
 console.log(document.body) // its prints body code
@@ -69,6 +70,8 @@ a[0].id = "newId"
 // document.querySelector("id or class or  tag") it return first element 
 
 let firstelement = document.querySelector("p");  // 1st element  
+console.dir(`Give first element of p ${firstelement}`);
+console.log(firstelement)
 console.dir(firstelement)
 
 // syntax
