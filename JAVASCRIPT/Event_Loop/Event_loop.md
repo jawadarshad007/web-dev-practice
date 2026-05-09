@@ -15,7 +15,7 @@ Iska jawab hai **Event Loop**.
 
 ---
 
-## 🧠 Important Components
+##  Important Components
 
 JavaScript runtime me 5 important cheezein hoti hain:
 
@@ -27,7 +27,7 @@ JavaScript runtime me 5 important cheezein hoti hain:
 
 ---
 
-## 🗂️ 1. Call Stack
+##  1. Call Stack
 
 Yahan synchronous code execute hota hai.
 
@@ -48,7 +48,7 @@ Sab line by line Call Stack me run hoti hain.
 
 ---
 
-## 🌐 2. Web APIs (Browser ka hissa)
+##  2. Web APIs (Browser ka hissa)
 
 Yeh browser provide karta hai, JavaScript nahi.
 
@@ -62,7 +62,7 @@ Jab JS ko koi async kaam milta hai, wo usay Web API ko de deta hai.
 
 ---
 
-## 📬 3. Callback Queue (Task Queue)
+##  3. Callback Queue (Task Queue)
 
 Jab Web API apna kaam complete kar leti hai, to callback yahan aa jata hai.
 
@@ -76,7 +76,7 @@ setTimeout(() => {
 
 ---
 
-## ⚡ 4. Microtask Queue (High Priority)
+##  4. Microtask Queue (High Priority)
 
 Isme yeh cheezein aati hain:
 
@@ -87,7 +87,7 @@ Microtask queue ki priority Callback Queue se zyada hoti hai.
 
 ---
 
-## 🔁 5. Event Loop (Main Hero)
+##  5. Event Loop (Main Hero)
 
 Event Loop ka kaam:
 
@@ -99,7 +99,7 @@ Agar haan:
 
 ---
 
-## 🧪 Example 1
+##  Example 1
 
 ```js
 console.log("Start");
@@ -125,7 +125,7 @@ Reason:
 
 ---
 
-## 🧪 Example 2 (Microtask Priority)
+##  Example 2 (Microtask Priority)
 
 ```js
 console.log("Start");
@@ -156,7 +156,7 @@ Reason:
 
 ---
 
-## 🧭 Flow (Text Diagram)
+##  Flow (Text Diagram)
 
 ```
 Call Stack empty?
@@ -174,7 +174,7 @@ Repeat
 
 ---
 
-## 🧠 Heavy Loops Kahan Run Hotay Hain?
+##  Heavy Loops Kahan Run Hotay Hain?
 
 ```js
 for (let i = 0; i < 1000000000; i++) {}
@@ -188,7 +188,7 @@ Is wajah se browser freeze ho jata hai.
 
 ---
 
-## 📌 Summary Table
+##  Summary Table
 
 | Situation   | Kahan Jata Hai                   |
 |------------|-----------------------------------|
@@ -199,7 +199,7 @@ Is wajah se browser freeze ho jata hai.
 
 ---
 
-## 🎯 Golden Rule
+##  Golden Rule
 
 Synchronous code first  
 Microtasks second  
@@ -207,7 +207,7 @@ Callbacks last
 
 ---
 
-## 🏁 Final Understanding
+##  Final Understanding
 
 JavaScript single thread hone ke bawajood async lagti hai because of:
 
