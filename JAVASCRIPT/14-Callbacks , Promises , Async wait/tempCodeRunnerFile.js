@@ -1,4 +1,4 @@
-// here your each function is act as a API.
+
     let orderDetail = {
         orderId : 12345,
         food : ["Pizza", "Burger", "Coke"],
@@ -34,9 +34,15 @@
 
         return new Promise((resolve , reject)=>{
              setTimeout(()=>{
-            console.log("Your order is now prepared")
-            orderDetail.token = 123;
-            resolve(orderDetail)
+                if (Math.random()>0.05){
+                     console.log("Your order is now prepared")
+                    orderDetail.token = 123;
+                    resolve(orderDetail)
+                }
+                else{
+                    reject("Food item is not present at restaurant")
+                }
+           
         },3000)
         })
        
@@ -46,9 +52,15 @@
         console.log(`Delivery boy is on the way to pickup Order from ${orderDetail.restaurant_location}` )   
         return new Promise((resolve , reject)=>{
              setTimeout(()=>{
-            console.log("I have picked up the Order")
-            orderDetail.recieved = true;    
-            resolve(orderDetail);
+                if(Math.random()>0.5){
+
+                    console.log("I have picked up the Order")
+                    orderDetail.recieved = true;    
+                    resolve(orderDetail);
+                }
+                else{
+                    reject("Delivery boy unable to reach restuarant")
+                }
         },3000)
         })
        
@@ -67,19 +79,21 @@
     }
 
 
-// Callback hell
-    // placeOrder(orderDetail , (orderDetail)=>{
-    //     prepareingOrder(orderDetail , (orderDetail)=>{
-    //         pickupOrder(orderDetail , (orderDetail)=>{
-    //             delieverOrder(orderDetail)
-    //         })
-    //     });
-    // });
 
+    async function  ordering() {
+        try{
 
-    placeOrder(orderDetail)
-    .then((orderDetail)=> prepareingOrder(orderDetail))
-    .then((orderDetail)=>pickupOrder(orderDetail))
-    .then((orderDetail)=> delieverOrder(orderDetail))
-    .then((orderDetail)=>console.log(orderDetail))
-    .catch((error)=>console.log("Error: ",error))
+            const responce1 = await  placeOrder(orderDetail)
+            const responce2 = await  prepareingOrder(responce1);
+            const responce3 = await  pickupOrder(responce2);
+            const responce4  = await  delieverOrder(responce3);
+            
+            console.log(responce4)
+        }
+        catch(error){
+            console.log(error)
+        }
+
+    }
+    ordering();
+    console.log("Just checking ,,,timimg ")
