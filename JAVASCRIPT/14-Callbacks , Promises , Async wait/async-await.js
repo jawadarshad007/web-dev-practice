@@ -210,3 +210,29 @@ console.log("I am separate task ...")
     }
     ordering();
     console.log("Just checking ,,,timimg ")
+
+
+
+
+
+
+
+
+
+
+
+    //
+    async function test(){
+
+        // Ya tasks sab independent hain , inka ek dusre se koi lena dena nahi hai , to inko parallel me execute krna chahiye taki time save ho skae.
+        // lakin yahn ap ne await use kiya ha to ye sequentially execute ho ga , pehla comment fetch hoga than photo than chat , is sa time zyada lage ga.
+        const comments = await fetch("https://jsonplaceholder.typicode.com/comments");
+        const photos = await fetch("https://jsonplaceholder.typicode.com/photos");
+        const chats = await fetch("https://jsonplaceholder.typicode.com/chats");
+
+
+
+        // agar ap chahte hain ki ye tasks parallel me execute ho to apko inko promise.all me wrap krna hoga taki ye ek sath execute ho skae.
+        const [comments , photos , chats] =  await Promise.all([fetch("https://jsonplaceholder.typicode.com/comments") , fetch("https://jsonplaceholder.typicode.com/photos") , fetch("https://jsonplaceholder.typicode.com/chats")])
+
+    }
