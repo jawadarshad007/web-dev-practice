@@ -1,13 +1,8 @@
-class Person{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
-    sayhello(){
-        console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
-    }
+const obj2 = {
+    account: 1234
 }
-
-// to create an object of the class
-const person1 = new Person("Jawad", 22)
-console.log(person1)
+console.log(obj2.name)
+// to inherit the properties of the object
+// is sa obj2, obj1 ko bhi point kar raha hai , to obj2 ma bhi name property aa jayegi
+obj2.__proto__ = obj;
+console.log(obj2.name)
