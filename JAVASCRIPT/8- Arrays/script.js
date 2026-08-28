@@ -90,7 +90,7 @@ for (let val of prices) {
 }
 
 
-// Methods in Arrays 
+                           // Methods in Arrays 
 let foods = ["Rice","Apple","Carrot",]
 console.log(foods)
 // to add something in end of the array
@@ -125,7 +125,7 @@ console.log(...heros2, ...foods2, ...numbers) // it will print all the elements 
 
 
 
-// add to start
+// add elemrnt at starting of the array
 let foodss = ["Rice","Apple","Carrot",]
 foodss.unshift("number1")
 console.log(foodss)
@@ -141,7 +141,7 @@ console.log(foods3)
 
 // return a piece of arrays
 // let foods = ["Rice","Apple","Carrot",]
-// sliceit does not change the original array 
+// slice it does not change the original array 
 console.log(foods.slice(1,3)) //it gives 1 index to 2 index dont add the last index
 console.log(foods.slice(1,)) //it gives 1 index to end index
 console.log(foods.slice()) //it gives complete array
@@ -223,7 +223,7 @@ console.log(arr);
 
 // Destructing in Arrays
 let [first, second] = arr; // it will assign the first element of the array to the variable first and the second element of the array to the variable second
-console.log(first, second, last)
+console.log(first, second)
 
 
 

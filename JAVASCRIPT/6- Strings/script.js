@@ -51,6 +51,7 @@ console.log(m.replaceAll("lo","she")) // replace multiple times
 console.log(q.concat(str , "moreData")) // it combine multiple strings    
 
 
+
 // removes white spaces just in ending and start
 let w= "    removes empty   spaces "
 console.log(w)

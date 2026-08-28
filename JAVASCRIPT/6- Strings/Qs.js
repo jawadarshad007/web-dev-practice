@@ -1,3 +1,29 @@
+// check palindrome or not
+function isPalindrome(str) {
+    let start = 0 , end= str.length-1;
+    let ispalindrome = true;
+    while(start < end){
+        if (str[start] != str[end]){
+            ispalindrome = false;
+            break;
+
+        }
+        start++;
+        end--;
+    }
+
+    if (ispalindrome){
+        console.log("Yes it is palindrome")
+    }
+    else{
+        console.log("Its not")
+    }
+  }
+  let str = "Ahmad"
+  isPalindrome(str);
+
+
+
 
 // Print unique elements 
 let unique = [];
@@ -22,5 +48,4 @@ function printUiquee(str){
 }
 
 let str = "Hello"
-console.log(str.length)
 printUiquee(str)

@@ -23,7 +23,7 @@ function App(){
 
 
 
-// Jab bhi data fetch krwana ho to useEffect hoo ka use hota ha.  
+// Jab bhi data fetch krwana ho to useEffect hook ka use hota ha.  
 // is ma ya jo callback funciton ha wo code ma sab sa last ma execute ho ga.
 // is ma agr empty array pass kro to ya only one time execute hota ha. re-render hone pr yaa dobara apne callBack funciton ko execute nai kre ga.
 useEffect(()=>{

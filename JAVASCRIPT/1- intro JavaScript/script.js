@@ -1,3 +1,4 @@
+// Js introduced in 1995
 alert("Hello");
 console.log("Code is Running")
 console.log("Code is also Running")
@@ -32,6 +33,33 @@ console.log("Your number is " + a)
 // Hardware Limitations: In 1995, PCs had limited resources (4-8MB RAM). JavaScript was designed to be lightweight and avoid the need for heavy, separate compilers (17:58-19:15).
 // Automatic Memory Management: Unlike C++ (which requires manual memory allocation/deallocation via new and delete), JavaScript includes automatic garbage collection to prevent memory leaks and crashes (19:15-21:10).
 // How JavaScript Runs
+
+
+
+
+
+
+// 🧑‍💻 Compiler
+// Compiler poore code ko ek saath translate karta hai machine language mein, phir program run hota hai.
+// 🗣️ Interpreter
+// Interpreter code ko line-by-line execute/translate karta hai.
+
+
+// Compiler converts code into machine language, which is understood by the computer's CPU(system)
 // Engines: Browsers use engines like V8 (for Google Chrome) or SpiderMonkey (for Firefox) to execute JavaScript (25:19-26:52).
-// The V8 Engine: It is essentially a piece of software written in C++ that compiles and executes JavaScript code (27:26-28:38).
-// Node.js: By taking the V8 engine out of the browser and into the local system, Node.js allows developers to run JavaScript code directly on their machines outside of a browser environment (41:40-43:46).
+// The V8 Engine: It is essentially a piece of software written in C++ machine code  and executes JavaScript code (27:26-28:38).
+//ya jo machine code hota ha ya machine independent hota ha , windows, mac, linux sab ma different hota ha . even ka 32 but ka bhi 64 bit sa different hota ha . 
+// is lia jab bhi app browser download karte ho to us ma different version hota ha
+
+// Node.js: By taking the V8 engine out of the browser and into the local system, Node.js allows developers to run JavaScript code directly on their machines outside of a browser environment. Ya JS ka runtime environment ha mean jo JS ko execute kr skhata ha. (41:40-43:46).
+
+
+
+
+
+
+
+
+
+ // Notes link
+// https://app.notion.com/p/Introduction-to-Javascript-2763a78e0e22809db99af584c1c5c6ec
