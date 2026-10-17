@@ -1,10 +1,12 @@
-const sym = Symbol("id")
-const user3 = {
-    name: "Bob",
-    age: 25,
-    0 : 100,
-    4: 500,
-    [sym]:"this is symbol"
+let obj3 = {
+    name: "Jawad",
+    age: 22,
+    address: {
+        city: "Jauharabad",
+        streetNo: 5
+    }
 }
-console.log(user3[0])
-console.log(user3[sym])
+let shallowCopy = {...obj3} // shallow copy
+obj3.name = "Fawad"
+obj3.address.city = "Lahore"
+console.log(shallowCopy)

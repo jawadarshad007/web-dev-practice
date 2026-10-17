@@ -1,20 +1,50 @@
+    // Events : Mouse event , click , double click
     // if we write inline events and JavaScript events , the priority goes to JavaScript code events
+
+    
 
 
 // node.event = ( ) => {
     //     //handle here
     //     }
-    
-let btn1 = document.querySelector("#btn1")
-btn1.onclick = () => {
-    console.log("Button 1 was clicked")
-    let a = 25;
-    a++;
-    console.log(a)
-    const bodyElement = document.querySelector("body");
-    body.style.backgroundColor = "blue"
 
-}
+
+let btn1 = document.querySelector("#btn1")
+
+// btn1.onclick = () => {  
+//     console.log("Button 1 was clicked")
+//     let a = 25;
+//     a++;
+//     console.log(a)
+//     const bodyElement = document.querySelector("body");
+//     body.style.backgroundColor = "blue"
+
+// }
+
+
+// btn1.onclick = () => { // this will overwrite the previous event handler, so only this one will be executed when the button is clicked.
+//     btn1.textContent = "it overwrite the upper one"
+// }
+
+// Best approach 
+btn1.addEventListener("click" , ()=>{
+    btn1.textContent = "Best Approch"
+})
+btn1.addEventListener("click" , ()=>{
+    btn1.style.color = "pink"
+})
+btn1.addEventListener("dblclick" , ()=>{
+    alert("You double clicked the button")
+})
+
+// // Mouse Events
+// btn1.addEventListener('click', (e) => console.log('Clicked'));
+// btn1.addEventListener('dblclick', (e) => console.log('Double clicked'));
+// btn1.addEventListener('mousedown', (e) => console.log('Mouse down'));
+// btn1.addEventListener('mouseup', (e) => console.log('Mouse up'));
+// btn1.addEventListener('mousemove', (e) => console.log('Mouse moving'));
+btn1.addEventListener('mouseenter', (e) => console.log('Mouse entered'));
+// btn1.addEventListener('mouseleave', (e) => console.log('Mouse left'));
 
 let div = document .querySelector("div")
 div.onmouseover = () => {
@@ -118,7 +148,7 @@ darkmode.addEventListener("click" , () => {
 let inputField = document.getElementById("inputField");
 let output = document.querySelector("#output");
     inputField.addEventListener("keydown", function(e) {
-        output.textContent = `You pressed: ${e.key}`;
+        // output.textContent = `You pressed: ${e.key}`
     });
 
 
@@ -183,61 +213,70 @@ firsth1.addEventListener("mouseleave" , ()=>{
 })
 
 
-// is ka neche optimze way dia gya ha 
-// let parent = document.getElementById("parent");
-// console.log(parent.children)
+// is ka neche optimze way dia gya ha  
+// it is not optimized because we have to add multiple event listerns here
+console.log("----------------")
+let parent = document.getElementById("parent");
+console.log(parent.children)
 // for (let child of parent.children){
 //     child.addEventListener("click" , ()=>{
 //         child.textContent = "I am Clicked"
 //     })
 // }
 
+// optimzed way
+ // Ab app ko tamam children sab pr event listener lagane ki need nai ha , app sirf  parent pr event listener lagao or eventObj.target se pata krlo ki event kis element pr trigger hua hai
+parent.addEventListener("click" , (eventObj)=>{
+    console.log(eventObj.target)
+    eventObj.target.textContent = "I am Clicked"
+})
 
 
 // Event Bubbling is a concept in which when an event is triggered on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
-   let grandParent = document.getElementById("grandParent");
-   // when event trigger it gives event object as parameter  ... is ka pass bth useful information hoti jaise ka x-axis(clientX) or y-axis(clientY) and many more
-    grandParent.addEventListener("click" , (eventObj)=>{
-        console.log(eventObj);
-        console.log(eventObj.target) // target property se hume pata chalta hai ki event kis element par trigger hua hai
-         console.log("Grand Parent Clicked")
-    })
+//    let grandParent = document.getElementById("grandParent");
+//    // when event trigger it gives event object as parameter  ... is ka pass bth useful information hoti jaise ka x-axis(clientX) or y-axis(clientY) and many more
+//     grandParent.addEventListener("click" , (eventObj)=>{
+//         console.log(eventObj);
+//         console.log(eventObj.target) // target property se hume pata chalta hai ki event kis element par trigger hua hai
+//          console.log("Grand Parent Clicked")
+//     })
 
-    let Parent = document.getElementById("parent2");
-    Parent.addEventListener("click" , ()=>{
-        console.log("Parent is Clicked")
-    })
+//     let Parent = document.getElementById("parent2");
+//     Parent.addEventListener("click" , ()=>{
+//         console.log("Parent is Clicked")
+//     })
 
-    let child = document.getElementById("child");
-    child.addEventListener("click" , (eventObj)=>{
-            eventObj.stopPropagation() // stopPropagation method se event bubbling ko stop kr skte ho
-            // console.log(eventObj.target)
-        console.log("Child Clicked")
-    })
+//     let child = document.getElementById("child");
+//     child.addEventListener("click" , (eventObj)=>{
+//             eventObj.stopPropagation() // stopPropagation method se event bubbling ko stop kr skte ho
+//             // console.log(eventObj.target)
+//         console.log("Child Clicked")
+//     })
 
 
 
-    // Ab app ko parents, children sab pr event listener lagane ki need nai ha , app sirf parent pr event listener lagao or eventObj.target se pata krlo ki event kis element pr trigger hua hai
+    // Ab app ko parents, children sab pr event listener lagane ki need nai ha , app sirf  grandParent pr event listener lagao or eventObj.target se pata krlo ki event kis element pr trigger hua hai
 
 
 
 // One of the optime way 
-    // let parent = document.getElementById("parent");
-    // parent.addEventListener("click" , (eventObj)=>{
-    //     console.log(eventObj.target) 
-    //     eventObj.target.textContent = "I am Clicked"  
-    // })
+    let grandParent = document.getElementById("grandParent");
+    grandParent.addEventListener("click" , (eventObj)=>{
+        eventObj.stopPropagation() // stopPropagation method se event bubbling ko stop kr skte ho
+        console.log(eventObj.target) 
+        eventObj.target.textContent = "I am Clicked"  
+    })
 
 
     // Remove Event Listeners
     // agr app na is event listerner ko del bhi krna ho to 
-    let parent = document.getElementById("parent");
-    function handleEvent (eventObj){
-        console.log(eventObj.target) 
-        eventObj.target.textContent = "I am Clicked"  
-        parent.removeEventListener("click" , handleEvent)
-    }
-    parent.addEventListener("click" , handleEvent)
+    // let parent = document.getElementById("parent");
+    // function handleEvent (eventObj){
+    //     console.log(eventObj.target) 
+    //     eventObj.target.textContent = "I am Clicked"  
+    //     parent.removeEventListener("click" , handleEvent)
+    // }
+    // parent.addEventListener("click" , handleEvent)
 
 
 

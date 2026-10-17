@@ -50,13 +50,35 @@ console.log(Array.prototype.__proto__ === Object.prototype) // true
 // functions ka bhi apna function.prototype hota hai, to functions ke bhi apne methods hote hn, jaise call, apply, bind etc. and ya bhi object.prototype ko point kar raha hai, to functions ke bhi object ke methods mil jate hn, jaise toString, hasOwnProperty etc.
 console.log(Function.prototype)
 console.log(Function.prototype.__proto__ === Object.prototype) // true
+// is lia functions ko objects bhi kaha jata hai.
+
+
+
+
+
+//               Classes in JavaScript
+// classes are basically bluePrints of your object , mean how your object looks 
+class Person{
+    constructor(name , age){
+        this.name = name;
+        this.age = age;
+    }
+    sayhello(){
+        console.log(`Hello ${this.name}`)
+    }
+}
+const p1 = new Person("Jawad" , 20)
+console.log(p1.name)
+console.log(p1.age)
+p1.sayhello()
 
 
 
 
 
 
-//Classes in JavaScript
+
+
 const person ={
     name : "Check",
     age: 10,
@@ -84,6 +106,7 @@ person1.sayhello()
 const person2 = new Person("Arshad", 42)
 console.log(person2.name)
 person2.sayhello()
+
 
 
 

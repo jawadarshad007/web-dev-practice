@@ -1,10 +1,11 @@
 // QS -- What is Window part ? who generated this ? 
-// Window Object
+// Window Object 
 /*The window object represents an open window in a browser. It is browser’s object (not JavaScript’s)
 & is automatically created by browser.
 It is a global object with lots of properties & methods */
 
-
+//                      DOM 
+// To interact with HTML file with JS , we use DOM(Document Object Model) which is a special object that represents the HTML document in form of object.    
 
 //document is a property of window object and it represents the HTML document in form of object that is displayed in that window.
 console.log(document)
@@ -16,6 +17,7 @@ special object is called DOM(Document object model) */
 // and DOM sa hm Dynamic , Runtime pr changing krte hn 
 console.log("hello")
 window.console.log("hello22222")
+console.log(document)
 console.log(document.body) // its prints body code
 // console.dir prints properties and methods of special objects like documents etc...       
 
@@ -31,23 +33,24 @@ console.dir(document.body)
 console.log(document.body)    
 console.dir(document.body.childNodes[1])    
 // Dynamic changes
-document.body.childNodes[1].innerText = "updared text"
+document.body.childNodes[1].innerText = "updated text"
 // DOM Manipulations
+console.log("----------------------------------------------------------------")
 let variable =  document.getElementById("Hello");
 console.dir(variable);
 
 
 
 
-/* how i change text in html class using javaScript. 
- Select all elements with the class name "cl"
+//  how i change text in html class using javaScript. 
+//  Select all elements with the class name "cl"
 const elements = document.getElementsByClassName("cl");
 
-Loop through the HTMLCollection and update the text
+// Loop through the HTMLCollection and update the text
 for (let i = 0; i < elements.length; i++) {
     elements[i].innerText = "Updated text in Class";
 }
-*/
+
 
 // it returns html collections like arrays(not complete array) but we can access it by index and also we can loop through it
 let a =  document.getElementsByClassName("cl")
@@ -57,13 +60,15 @@ console.log(arr);
 console.dir(a)
 console.log(a)
 
+// to insert an id to an element
+a[0].id = "newId"
+
 let parahs =document.getElementsByTagName("p");
 console.dir(parahs);
 
 
 
-// to insert an id to an element
-a[0].id = "newId"
+
 
 // agr in sab(getElementsByClass,id,tagName) ko aik sath use krna ho to hm modern level pa querySelector use krte hn
 // syntax
@@ -80,6 +85,7 @@ let all = document.querySelectorAll("p");  // all elements
 console.dir(all);   
 
 // to access Class in query selector
+console.log("*****************")
 let firstclass = document.querySelector(".cl"); // 1st element
 console.dir(firstclass)
 
@@ -91,7 +97,7 @@ console.dir(allclasses);
 let firstid = document.querySelector("#Hello"); // 1st element
 console.dir(firstid);
 
-// ID ka case ma querySelectorAll ya sense nai banata
+// ID ka case ma querySelectorAll ya sense nai banata because id unique hoti ha.
 
 // see manipulation in Notes
 console.log(firstid.tagName);
@@ -120,4 +126,3 @@ console.dir(div3)
 let heading = document.querySelector("h1").textContent;
 console.dir(heading)
 
-del

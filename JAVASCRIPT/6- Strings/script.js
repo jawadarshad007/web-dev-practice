@@ -1,12 +1,19 @@
 //(Imp qs) Strings are immutable(the thing that never change) in JavaScript
 console.log("This is String tutorials")
 let a = "Jawad"
+a[2] = "A" // it will not change the string because string is immutable
+console.log(a)
 console.log(a[0])
 console.log(a[1])
 console.log(a[2])
 console.log(a[3])
 console.log(a[4])
 console.log(a.length)
+// Modern way to create string is using backticks(``) and it is called template literals
+console.log(`From that you can 
+also jump to new line`)
+
+
 let real_name = "Jawad"
 let city = "Lahore"
 console.log(`My name is ${real_name} and city is ${city}`) //Templeta literals
@@ -36,7 +43,7 @@ console.log(q.toLowerCase())
 //str.slice(start, end?)  returns part of string
 console.log(q.slice(1 , 4 )) //thats mean 1 sa la kar 4 include nai ho ga
 console.log(q.slice(1)) // thats mean 1 sa la kr end tq print kre ga
-console.log(q.slice(-7))// thats mean 7 sa la kr end tq print kre ga
+console.log(q.slice(-7))// thats mean 7 sa la kr end tq print kre ga(menas last 7 characters)
 console.log(q.slice(-7,-1))//Ans:letter... thats mean 7 sa la kr 1 sa pehle tk print kre ga
 console.log(q.substring(1,4)) // it is same as slice but it does not accept negative index
 
@@ -81,3 +88,6 @@ const str2 = "Hello Coder Army Coder"
 console.log(str2.indexOf("Cod")) // it return the index of first character of word
 console.log(str2.lastIndexOf("Cod")) // it return the index of first character of last word 
 console.log(str2.includes("Cod")) // it return true if word is present in string otherwise false
+
+
+

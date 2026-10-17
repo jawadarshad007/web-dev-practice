@@ -112,17 +112,18 @@ console.log(numbers.toString())
 console.log(foods.join(" - "))
 console.log(numbers.join(" | "))
 
+
 // to combine multi[ple arrays and return results
 let foods2 = ["Rice","Apple","Carrot",]
 let heros2 = ["SpiderMAn","Batman","SuperMan","Another","More"]
 // let newz = foods.concat(heros);
+// .concat returns a new array 
 let newz = heros2.concat(foods2, numbers);
 console.log(newz);
 // we also achive this by using spread operator
 let newz2 = [...heros2, ...foods2, ...numbers]
 console.log(newz2)
 console.log(...heros2, ...foods2, ...numbers) // it will print all the elements of the arrays without creating a new array
-
 
 
 // add elemrnt at starting of the array
@@ -183,26 +184,31 @@ console.log(arr4.includes(10)) // it will return false because 10 is not present
 
 
 
-// Sorting in array
+// Sorting in array(Chnages the original array)
 let sorting = ["ali","Jawad", "Ali", "Zain", "Ahmed", "Sara"]
 console.log(sorting.sort())// it will sort the array in alphabetical order and it is case sensitive so capital letters will come before small letters due to in ASCII table capital letters have lower ASCII values than small letters
 console.log(sorting)// it will change the original array because sort method changes the original array
 
 console.log(sorting.reverse()) // it will reverse the array and it also changes the original array
 
+
+// sorting array in decending order
+// sorting.sort();
+// sorting.reverse();
+
 let numm = [101, 90, 80, 32, 13]
-console.log(numm.sort()) // it will sort the array in ascending order but it is not working as expected because sort method converts the numbers to strings and then compares them based on their Unicode values so it is sorting them as strings rather than numbers
+console.log(numm.sort()) // it will sort the array in ascending order but it is not working as expected because sort method converts the numbers to strings and then compares them based on their Unicode values(Ascii table) so it is sorting them as strings rather than numbers
 // ya JS ma is lia ha khoun ka array ma multiple types of data ho sakta ha to sort method ko pata nahi hota ke array ma numbers hain ya strings hain is lia wo unko strings ki tarah sort karta ha
 let mix = [10,"Zohaib",true]
 mix.sort();
-console.log(mix) 
+console.log(mix)     
 // assending order
 console.log(numm.sort((a,b)=>a-b)) // it will sort the array in ascending order because we are providing a compare function to sort method which tells it how to sort the numbers. In this case, we are returning a-b which means that if a is less than b, it will return a negative value and a will come before b in the sorted array. If a is greater than b, it will return a positive value and a will come after b in the sorted array. If a is equal to b, it will return 0 and their order will remain unchanged in the sorted array.
 // descending order
 console.log(numm.sort((a,b)=>b-a))
 
 
-
+  
 
 // flat array 
 let arr5 = [1,2,3,[4,5,[999,777],6],7,8,[9,10]]
@@ -214,8 +220,12 @@ console.log(arr5.flat(Infinity)) // in case you don't know how many levels of ne
 
 
 
-// Arrays are object in JS
+// Arrays are object in JS 
+// because defination of array is it contain homogenius type of data but in JS you can store heterogeneous type of data , and array has continous memory location , but in JS due to heterogeneous type it may not has continous menory locaiton.
+
+// IN JS array is stored like an object 
 let arr = [10, 20, 30,88,90];
+console.log(arr["1"])
 arr.name = "Coder";
 console.log(arr);
 
@@ -227,6 +237,7 @@ console.log(first, second)
 
 
 
+// We already know that arrays store their elements in contiguous memory locations. To achieve this, JavaScript stores references (addresses) to the actual data in the array, while the actual data is stored in the heap.
 
 
 
@@ -254,3 +265,9 @@ console.log(apps);
 const string = "Hello, World!";
 string[0] = "h"; // This will not change the string
 console.log(string); // Output: "Hello, World!" (unchanged) 
+
+
+
+
+
+

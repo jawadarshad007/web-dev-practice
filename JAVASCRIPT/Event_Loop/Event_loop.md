@@ -13,6 +13,9 @@ Agar JS single thread hai to async kaam (setTimeout, API calls) kaise chalte hai
 
 Iska jawab hai **Event Loop**.
 
+
+agr app na multiple buttons pa eventListerner laga rakha ha , jo JS aik sath kase multiple buttons pa event-listen kare gyi ? because JS is a single treaded wo to aik time pa aik hi button par event-listen kr skahe gyi....
+Solution : Web APi wale sectoin ma dia gaya ha
 ---
 
 ##  Important Components
@@ -22,7 +25,7 @@ JavaScript runtime me 5 important cheezein hoti hain:
 1. Call Stack
 2. Web APIs
 3. Callback Queue (Task Queue)
-4. Microtask Queue
+4. Microtask Queue (High Priority than callback queue)
 5. Event Loop
 
 ---
@@ -45,26 +48,36 @@ C
 ```
 
 Sab line by line Call Stack me run hoti hain.
-
+and after the execution of code Call Stack ko empty kr dia jata ha 
 ---
 
 ##  2. Web APIs (Browser ka hissa)
 
 Yeh browser provide karta hai, JavaScript nahi.
-
+Browser ka window object hi apko Web APis ka access deta ha 
+ Browser ap ka multi treaded hota ha 
 Examples:
 - setTimeout
 - setInterval
 - DOM Events
 - fetch API
+- localStorage
+- console.log()
 
 Jab JS ko koi async kaam milta hai, wo usay Web API ko de deta hai.
+web api hi setTimeout/setInterval jasson ka time calculate krta ha , time complete ho jane ka bad wo callback QUEUE 
+ma behj deta ha is callfunciton ko jo setTimeout/setInterval ka andr hota ha    
 
+
+agr app na multiple buttons pa eventListerner laga rakha ha , jo JS aik sath kase multiple buttons pa event-listen kare gyi ? because JS is a single treaded wo to aik time pa aik hi button par event-listen kr skahe gyi....
+Solution : Web APi event listen krte hn background ma and jab wo event occur hota ha to is ka callback function callback queue ko da dia jata ha 
 ---
 
 ##  3. Callback Queue (Task Queue)
-
-Jab Web API apna kaam complete kar leti hai, to callback yahan aa jata hai.
+<!-- setTimeout()
+setInterval()
+DOM events like click, input, keydown -->
+Jab Web API apna kaam complete kar leti hai, to callback function yahan aa jata hai.
 
 ```js
 setTimeout(() => {
@@ -72,14 +85,14 @@ setTimeout(() => {
 }, 2000);
 ```
 
-2 seconds baad callback queue me ayega.
+2 seconds baad callback function queue me ayega.
 
 ---
 
 ##  4. Microtask Queue (High Priority)
 
 Isme yeh cheezein aati hain:
-
+-fetch like operations 
 - Promises (.then, .catch)
 - MutationObserver
 

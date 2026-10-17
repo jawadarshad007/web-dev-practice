@@ -60,7 +60,7 @@ function getdata3(dataid){
 
 
 
-// Coder Army 
+//                                         Coder Army 
 // async function always returns a promise
  async function greet(){
     return "Hello World";
@@ -78,9 +78,20 @@ responce.then((data) => {
 // .then((data)=>console.log(data))
 
 
+
+
 // await keyword is used to wait for a promise to resolve. (dont use it outside of an async function because is sa JS wait kre ga next lines ko execute nai kre ga jis sa  app ka UI freeze ho skahta hai)
 // always use await inside an async function
 // here also event loop concept is applied.
+
+// console.log("Start")
+// const responce = await fetch("https://api.github.com/users");
+// const data = await responce.json();
+// console.log(data);
+// console.log("End")
+
+
+console.log("Start")
 async function gitbubUsers(){
     console.log("Hello g")
     try{
@@ -90,7 +101,7 @@ async function gitbubUsers(){
             throw new Error("Data not found");
         }
         const data = await responce.json();
-        console.log(data)
+        console.log(data)   
     }
     catch(error){
         console.log(error)
@@ -226,12 +237,15 @@ console.log("I am separate task ...")
 
         // Ya tasks sab independent hain , inka ek dusre se koi lena dena nahi hai , to inko parallel me execute krna chahiye taki time save ho skae.
         // lakin yahn ap ne await use kiya ha to ye sequentially execute ho ga , pehla comment fetch hoga than photo than chat , is sa time zyada lage ga.
+        
         const comments = await fetch("https://jsonplaceholder.typicode.com/comments");
         const photos = await fetch("https://jsonplaceholder.typicode.com/photos");
         const chats = await fetch("https://jsonplaceholder.typicode.com/chats");
 
 
 
+
+        
         // agar ap chahte hain ki ye tasks parallel me execute ho to apko inko promise.all me wrap krna hoga taki ye ek sath execute ho skae.
         const [comments , photos , chats] =  await Promise.all([fetch("https://jsonplaceholder.typicode.com/comments") , fetch("https://jsonplaceholder.typicode.com/photos") , fetch("https://jsonplaceholder.typicode.com/chats")])
 

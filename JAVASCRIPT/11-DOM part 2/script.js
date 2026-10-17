@@ -3,13 +3,16 @@
 // getAttribute( attr ) //to get the attribute value
 let div = document.querySelector("div")
 console.log(div)
+console.log(div.getAttribute("id"))
+console.log("-------------")
 let id = div.getAttribute("id")
 console.log(id)
 console.log(div.getAttribute("name"))
 let p = document.querySelector("p") 
 console.log(p.getAttribute("class"))
 
-// setAttribute( attr, value ) //to set the attribute value
+
+// setAttribute( attribute, value ) //to set the attribute value
 console.log(p.setAttribute("class", "new-class"))
 
 
@@ -24,6 +27,12 @@ div.innerText="Text-changed"
 // Insert Elements contains 2-Steps 1)Create 2)add
 let newbtn = document.createElement("button")
 newbtn.innerText = "Click me!"
+newbtn.id = "button";
+// newbtn.className = "classButton"; // its not o good practice to assign className because in that method it is difficult to add multiple classnames
+newbtn.classList.add("classButton1");
+newbtn.classList.add("classbutton2");
+newbtn.classList.add("classbutton3");
+newbtn.classList.remove("classbutton3")
 console.log(newbtn)
 newbtn.style.backgroundColor = "red"
 newbtn.style.color = "white"
@@ -34,6 +43,10 @@ newbtn.style.color = "white"
 document.querySelector("body").prepend(newbtn)
 
 
+
+
+
+
 let newheading = document.createElement("h1")
 newheading.innerHTML = "<i>I am new heading</i>"
 document.querySelector("body").append(newheading)
@@ -41,7 +54,7 @@ document.querySelector("body").append(newheading)
 
 // Delete Elemnet 
 // node.remove( ) //removes the node
-p.remove();
+// p.remove();
 
 
 
@@ -113,6 +126,7 @@ unorderedList.append(list);
 unorderedList.append(list2);
 unorderedList.prepend(list3);
 
+
 // list.after(list4);
 
 console.dir(unorderedList)
@@ -122,9 +136,9 @@ unorderedList.children[1].after(list4)
 
 
 
+
+
 // Now lets see real world example where you recieve a long length array , and you put the data of the array in ordered list. 
-
-
 
 // this method is not optimied , beacuse we update UI on each iteration, and it is not good for performance.    
 let array = ["Bicep", "Tricep", "Chest", "Shoulders"];

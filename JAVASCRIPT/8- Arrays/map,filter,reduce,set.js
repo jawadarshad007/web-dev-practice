@@ -4,10 +4,11 @@
 // forEach() .....takes a callback function and executes it for each element in the array. It does not return a new array.
 let array = [10, 20, 30, 40, 50]
 let sum = 0;
-array.forEach((element,index,array)=>{
+array.forEach((element,index,array)=>{ // here index and array parameters are optional
     sum+=element;
     console.log(element,index,array)
 })
+console.log(array)
 console.log(`Sum is ${sum}`)
 
 
@@ -22,14 +23,15 @@ console.log(`Sum is ${sum}`)
 
 
 
-
-
-// map 
+//                           map...
+// - Core Purpose: To create a new array by transforming every element from an original array.
+// - Key Characteristics:
+//     - It always returns a new array
+ 
 let arr= [1, 11, 5, 9]
 // let newarr= []
 // for (let index = 0; index < arr.length; index++) {
-//     const element = arr[index];
-//     newarr.push(element**2)
+//     newarr.push(arr[index]**2)
 // }
 // console.log(newarr)
 
@@ -44,10 +46,10 @@ console.log(newarr)
 
 
 let a = [1,2,3]
-// let newa = a.map( (el,index,arr)=>{
-//     return el*el
-// } )
-// console.log(newa)
+let newa = a.map( (el,index,arr)=>{
+    return el*el
+} )
+console.log(newa)
 
 // make your own customize map function
 a.maping = function(callbackFunc){
@@ -66,23 +68,47 @@ console.log(newa)
 
 
 
-// filters...
+
+
+
+
+//                                      filters...
 // takes a callback function and returns a new array with all the elements that pass the test implemented by the callback function.
+// it always returns a new array and does not modify the original array.
 let arr2 = [10, 20, 30, 40, 50, 60, 70]
-// let newarr2 = arr2.filter((element)=> element>45)
-// console.log(newarr2)
+let newarr2 = arr2.filter((element)=> element>45)
+console.log(newarr2)
+
+
+
+// Your Own customize filter fucntion
+arr2.filtering = function(callback){
+    const newArr = [];
+    for (let element of this){
+        console.log(element)
+        if (callback(element)){
+            newArr.push(element)
+        }
+    }
+    return newArr;
+}
+
+let newarr2 = arr2.filtering((element)=> element>45)
+console.log(newarr2)
+
+
 
 // make your own customize filter function 
 // arr2.filtering= function {} ..... only works with arr2 array 
 // agr hm chahte hai ki ye function kisi bhi array ke sath work kare to hume usse array ke prototype me add karna padega taki wo sare arrays ke sath work kare
 Array.prototype.filtering = function(callbackFunc){
-    let ans = [];
+    let newArr = [];
     for(let num of this){
            if (callbackFunc(num)){
-            ans.push(num)
+            newArr.push(num)
     }   
     }
-    return ans;
+    return newArr;
 }
 // let newarr2 = arr2.filtering((element)=> element>45)
 // console.log(newarr2)
@@ -151,7 +177,7 @@ console.log(newarr.filter((ele) =>
 
 
 
-
+//               reduce...
 //  reduce = reduces an array to a single value
 
 // array.reduce((accumulator, currentValue) => {
@@ -163,6 +189,9 @@ const total = qqq.reduce((accumulator, currentValue)=>{
     return accumulator + currentValue;
 },0)
 console.log(total)
+
+
+
 
 let xyz = [1,2,3,4,5,6]
 const chkreduce = (a, b)=>{
@@ -221,15 +250,23 @@ const products = [
   { id: 20, name: "Artisan Bread", category: "Groceries", price: 8, inStock: true }
 ];
 
+
+
+
 // const newProduct = products.filter((product)=> product.price < 100) // filtering products with price less than 100
+// console.log(newProduct)
 // const newProduct = products.filter((product)=> product.price < 100).sort((a,b)=> b.price-a.price)
 // console.log(newProduct) // filtering products with price less than 100 and sorting them in descending order of price
 
-const newMap = products.map((product)=> ({name:product.name , price:product.price}))
-console.log(newMap) 
+
+// const newMap = products.map((product)=> ({name:product.name , price:product.price}))
+// console.log(newMap) 
+
+
 
 const newProduct = products.filter((product)=> product.price < 100).sort((a,b)=> b.price-a.price).map((product)=> ({name:product.name , price:product.price})) // filtering products with price less than 100 and sorting them in descending order of price and then mapping them to an array of objects with only name and price properties
 console.log(newProduct)
+
 
 
 const totalPrice = products.reduce((accumulator, currValue)=> {
@@ -253,7 +290,7 @@ console.log(totalPrice)
 
 
 
-// Data Structure: Set 
+//                                Data Structure: Set 
 // Set is a collection of unique values. It does not allow duplicate values and does not maintain any order of elements. It provides methods to add, delete, and check for the presence of elements in the set.
 
 
@@ -273,13 +310,22 @@ console.log(set1)
 
 let email  = ["mo@gm" , "ra@gm", "rt@gm", "mo@gm"]
 let uniqueEmail =  new Set(email)
-// to iterate over set
-for (let num of uniqueEmail){
-    console.log(num)
-}
-console.log(uniqueEmail)
 // to convert set to array using spread operator
 console.log([...uniqueEmail])
 // another way
 uniqueEmail = [...new Set(email)]
 console.log(uniqueEmail)
+// to iterate over set
+for (let num of uniqueEmail){
+    console.log(num)
+}
+console.log(uniqueEmail)
+
+
+
+
+
+//               Data Structure : Map
+// Map key-value pairs store karta hai:
+// ### **A `Map` is like an object, but its keys can be *anything* (not just strings).**
+// This is the most critical difference. In a standard object `{}`, keys are automatically converted to strings. A `Map` preserves the key's type, allowing you to use objects, functions, or any other data type as a key.

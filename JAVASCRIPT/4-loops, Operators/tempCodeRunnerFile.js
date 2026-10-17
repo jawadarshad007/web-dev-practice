@@ -1,1 +1,4 @@
-console.log(0 && 20)
+const fruits = ["Apple", "Banana", "Mango"];
+for (let index in fruits) {
+  console.log(index);
+}

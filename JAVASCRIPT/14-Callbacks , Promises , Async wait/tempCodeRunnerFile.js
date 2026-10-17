@@ -1,3 +1,5 @@
- const comments = await fetch("https://jsonplaceholder.typicode.com/comments");
-        const data = await comments.json();
-        console.log(data);
+console.log("Start")
+const responce = await fetch("https://api.github.com/users");
+const data = await responce.json();
+console.log(data);
+console.log("End")

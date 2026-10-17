@@ -109,20 +109,23 @@ getdata3(1).then((res) => {
 
 
 
-// COder army 
+//                                    COder army 
 
 console.log("Start")
 
-const info = fetch("https://api.github.com/users") 
-// console.log(info) 
+const info = fetch("https://api.github.com/users") // asynchronous task
+// console.log(info)   // ans promise pending
 // Jab fullfiled ya reject ho
 const info2 = info.then((responce)=>{
     // console.log(responce) // idr jo asal data ha wo bytes ki form ma body: ka andr aya ha   
     // Now i have to convert it in Readable form
-    return responce.json() // JSON mean JavaScript Object Notation, ye ek format ha jisme data ko store kiya jata ha, aur ye human readable hota ha 
+    return responce.json() // responce.json() is a also asynchronous task, it also returns a promise, so we have to use then() method to get the data 
+    // JSON mean JavaScript Object Notation, ye ek format ha jisme data ko store kiya jata ha, aur ye human readable hota ha 
     // Ya JSON JS object sa different hota ha is ko ap ki sari programming language samajh sakti ha.
                            // Why we need Json
     // Because different programming language ma data ko exchange karne ke liye ek common format ki zarurat hoti ha, aur JSON us format ko provide karta ha, is se hum apne data ko easily exchange kar sakte ha different programming language ke beech ma.
+    // for example
+    // client side ma hum JS use karte ha, aur server side ma hum Python use karte ha, to hum apne data ko JSON format ma exchange kar sakte ha, aur dono programming language easily samajh sakti ha.
 })
 info2.then((data)=>{
      console.log(data)
@@ -159,6 +162,7 @@ fetch("https://api.github.com/users")
      parent.textContent = error.message;
 })
 console.log("End")
+
 // Promise reject in 3 waja sa ho sakta ha(Jab Server koi responce da hi nai paya)
 // 1. Your Internet down
 // 2. Server down

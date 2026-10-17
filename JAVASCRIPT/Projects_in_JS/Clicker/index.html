@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Project</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: black; color: white; height: 100vh; position: relative;">
+    
+    
+</body>
+<script>
+    const body = document.querySelector("body")
+    body.addEventListener("click", (e)=>{
+        console.log(e.clientX , e.clientY)
+
+        const circleEle = document.createElement('div');
+        circleEle.classList.add('circle')
+        circleEle.textContent = "LoveU"
+
+const colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white", "brown", "gray","cyan", "magenta", "teal", "navy", "gold", "silver"];
+
+        circleEle.style.backgroundColor =   colors[Math.floor(Math.random()*6)]
+
+        circleEle.style.top = `${e.clientY-25}px`
+        circleEle.style.left = `${e.clientX-25}px`
+
+        body.append(circleEle)
+
+
+        // to remove each circule element from the body
+        setTimeout(()=>{
+            circleEle.remove();
+        },5000)
+    })
+</script>
+</html>

@@ -1,5 +1,3 @@
-
-// Print unique elements 
 let unique = [];
 function printUiquee(str){
    
@@ -22,5 +20,4 @@ function printUiquee(str){
 }
 
 let str = "Hello"
-console.log(str.length)
 printUiquee(str)

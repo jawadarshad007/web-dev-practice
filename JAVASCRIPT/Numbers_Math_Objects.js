@@ -1,9 +1,10 @@
 let b = 34.54234;
-console.log( b.toFixed(3)) // Answer: 34.54 this method rounds the number to the specified number of decimal places. In this case, it rounds to 2 decimal places.
+console.log( b.toFixed(3)) // Answer: 34.542 this method rounds the number to the specified number of decimal places. In this case, it rounds to 2 decimal places.
 console.log(typeof b.toFixed(2)) // Answer: string
 
-console.log(b.toPrecision(2)) // Answer: 34.5423 this method rounds the number to the specified length. In this case, it rounds to 6 significant digits.
+console.log(b.toPrecision(3)) // Answer: 34.5 this method formats a number to a specified length, including both the integer and decimal parts. In this case, it formats the number to 3 significant digits.
 console.log(typeof b.toPrecision(6)) // Answer: string
+
 
 // convert number to string 
 console.log(b.toString())
@@ -26,12 +27,21 @@ console.log(Boolean({}))// Answer: true because in JavaScript, all objects are t
 // Non-Premetive reference base pa compare hote hn 
 // Premetive : Copy by value 
 
+let a = 10;
+let b = a;
+b=20;
+console.log(a,b) // Answer: 10, 20 because `a` and `b` are primitive values (numbers). When you assign `b = a`, it copies the value of `a` into `b`. After that, when you change the value of `b` to 20, it does not affect the value of `a`, which remains 10.
+
+console.log(a==b) // Answer: false because `a` is 10 and `b` is 20, so they are not equal.yahn pa comparison value/data sa hota ha.
+
+
+
 
 // Maths
 console.log(Math.abs(-4)) // Answer: 4 this method returns the absolute value of a number, which is the non-negative value of the number without regard to its sign. In this case, it converts -4 to 4.
 console.log(Math.PI)
 console.log(Math.floor(2.7)) // Answer: 2 this method rounds a number down to the nearest integer. In this case, it rounds 2.3 down to 2.
-console.log(Math.ceil(2.3)) // Answer: 3 this method rounds a number up to the nearest integer. In this case, it rounds 2.3 up to 3.
+console.log(Math.ceil(2.3)) // Answer: 3 this method rounds a number up to the upper integer. In this case, it rounds 2.3 up to 3.
 console.log(Math.round(2.3)) // Answer: 2 this method rounds a number to the nearest integer. In this case, it rounds 2.3 down to 2 because it is closer to 2 than to 3.
 console.log(Math.round(2.7)) // Answer: 3 this method rounds a number to the nearest integer. In this case, it rounds 2.7 up to 3 because it is closer to 3 than to 2.
 console.log(Math.max(23,56,66,32))// Answer: 66 this method returns the largest of the given numbers. 
@@ -45,13 +55,13 @@ console.log(Math.floor(Math.random() * 6)+1) // it gives number 1 to 6.
 // if you want to generate a random number between a specific range, you can use the following formula:
 // Math.random() * (max - min+1) + min
 console.log(Math.floor(Math.random()*(25-15+1))+15) // it gives number between 15 to 25.
-// to generate OTP of 4 digits
+//                      to generate OTP of 4 digits
 console.log(Math.floor(Math.random()*(9999-1000+1))+1000) // it gives number between 1000 to 9999.
 
 console.log( typeof Math.random)     
 
 function random(){
-    let num = 2340;
+    let num = 2340;  // yahn pa hame dunamic number chaoiya like your system time or any other number which is changing every time.
     let sqrt = Math.sqrt(num) 
     let Multiply = sqrt * 1239;
     let cube = Math.pow(Multiply,3);
@@ -63,4 +73,7 @@ let randomFunc = random()
 console.log(randomFunc) // it gives number between 15 to 25.
 
 
-// we dont use Math.random to generate OTP because it is not secure and can be easily predicted. For generating OTPs, it is recommended to use a secure random number generator, such as the `crypto` module in Node.js or the `window.crypto` API in browsers, which provides a more secure way to generate random numbers.
+// we dont use Math.random to generate OTP because it is not secure and can be easily predicted becuase its uses system time and time must be same on multiple devices. For generating OTPs, it is recommended to use a secure random number generator, such as the `crypto` module in Node.js or the `window.crypto` API in browsers, which provides a more secure way to generate random numbers.
+
+
+    

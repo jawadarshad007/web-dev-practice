@@ -44,6 +44,7 @@ function getdata (dataid , callback){
         if (callback) {
             callback();
         }
+        
     } , 2000);
 }
 getdata(1 , () =>{
@@ -120,3 +121,5 @@ getdata(1 , () =>{
         });
     });
 // prepareingOrder()
+
+

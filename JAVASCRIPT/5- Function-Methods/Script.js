@@ -25,17 +25,18 @@ function sum1(a , b) {
 sum1 (3 , 5)
 
 
-// c=3 tab kaam kre ga jab argument ma c ki value na bejhgi gahe ho
-function sum(a , b , c=3) {
+// c=0 and d=0 tab kaam kre ga jab argument ma c and d ki value argument sa  na bejhgi gahe ho
+// jab c ki ya d ki ya donon ki value as a argument bejh di jaye gi to c=0 and d=0 override ho jaye gi
+function sum(a , b , c=0, d=0) {
     // console.log(a + b);
-    return a + b + c;
+    return a + b + c + d;
     console.log("The function will execute after the return statement")  //note this
      
 }
 console.log("The sum of numbers are " + sum(2,3));
- result1 = sum (23 , 5)
+ result1 = sum (23 , 5 , 2) 
  result2 = sum (4 , 9)
- result3 = sum (11 , 15 , 1)
+ result3 = sum (11 , 15 , 1 , 12)
 console.log("The sum of numbers are " + result1);
 console.log("The sum of numbers are " + result2);
 console.log("The sum of numbers are " + result3);
@@ -55,11 +56,13 @@ function addNum(...num){
 
         // array ka elements ko access ka better way for of loop ha
         for (let elements of num){
-            sum = sum + elements
+            // sum = sum + elements
+            sum += elements
         }
       console.log(`Sum is ${sum}`)
 }
 addNum(1,2,3,4,)
+addNum(1,2,3,4,5,6,7,8,9,10)
 
 
 //Rest operator wahn lgta ha jahn ap ka pass bth si indiviual values aa rhan hn , and ap  na inko catch krna ho
@@ -79,11 +82,14 @@ console.log(array3)
 
 // Another way to write the functions is function expression
 // is ma difference ya ha ka ap is ko inilize sa pahle call nai kr skte ho
+
 // console.log(sum2(4,5)) // its not work because sum is not defined yet
 let sum2 = function(num1,num2){
     return num1+num2
 }
 console.log(sum2(4,5))
+
+
 
 
 // Arrow Function
@@ -94,7 +100,7 @@ let varname =(x)=>{
 console.log(varname(9))
 
 
-// if we single line code in the function then we can write it in a single line without using return keyword    
+// if we single line code that return something in the function then we can write it in a single line without using return keyword and curly brakets    
 let addNumber = (num1,num2)=> num1+num2;
 console.log(addNumber(3,4))
 
@@ -103,6 +109,18 @@ console.log(addNumber(3,4))
 let squareNum = num => num*num;
 console.log(squareNum(9))
 
+
+// return object in arrow funciton
+// simple way
+let greeting = ()=>{
+    let user = {
+        name : "Jawad",
+        age : 22
+    }
+    return user;
+}
+console.log(greeting())
+                    // New way
 // let greet = () => {name:"Jawad",age:20} // itsgive error
 // to handle object case in arrow function we have to wrap the object in parenthesis
 let greet = () => ({name:"Jawad",age:20}) 
@@ -141,8 +159,7 @@ func1(66)
 
 
 
-
-// Callback Function -- kiis function ko as a parameter pass krna callback function kehlata ha
+// Callback Function -- A callback function in JavaScript is a function passed as an argument to another function. 
 function greet(){
     console.log("Hello gi")
 }
@@ -159,13 +176,14 @@ function meet(callback){
     console.log("Finished")
 }
 // console.log(greet)
+
 meet(greet);
 meet(dance);
 
 
 
 
-// Callback example
+// Callback Real useCase example
 function blinkItOrder(){
     console.log("We have start packing Ur food")
 }
@@ -194,6 +212,33 @@ payment(500 , blinkItOrder);
 
 
 
+// High Order Function:
+// A function that takes another function as an argument or returns a function as a result.
+
+// returns a function as a result
+// is ma clouser ka consept bhi use ho rha ha 
+function outer(value){ // here outer function in high order function
+    
+    return function inner(num){
+        console.log("I am inner function")
+        console.log(num*value)
+    }
+
+}
+const functionHolder = outer(4);
+functionHolder(5)
+
+
+
+// A function that takes another function as an argument
+function greet(callback){
+console.log("Hey!") 
+callback()
+}
+function user(){
+console.log("hELLO I am user")
+}
+greet(user)
 
 
 

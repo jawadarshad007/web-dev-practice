@@ -20,7 +20,7 @@
 
 
           const userName = document.createElement("h2")
-          userName.textContent = user.login;
+          userName.textContent = user.login.toUpperCase();
 
 
           const anchor = document.createElement("a");

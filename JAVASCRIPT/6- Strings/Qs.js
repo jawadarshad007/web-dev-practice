@@ -19,7 +19,7 @@ function isPalindrome(str) {
         console.log("Its not")
     }
   }
-  let str = "Ahmad"
+  let str = "madam"
   isPalindrome(str);
 
 

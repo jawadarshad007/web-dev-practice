@@ -8,7 +8,7 @@ console.log("I am a tutorial on Loops")
 // for (let i = 0; i < 100; i++) { 
 //     console.log(a + i); 
 // }
-// For-In Loop
+// For-In Loop.used to get key/indexes (Usually used with objects.)
 let emp = {
     name: "Harry",
     role: "Programmer",
@@ -21,7 +21,13 @@ for (let keyPart in emp) {
         // console.log(keyPart , element);
 }
 
-//For-Of Loop
+
+const fruits = ["Apple", "Banana", "Mango"];
+for (let index in fruits) {
+  console.log(index);
+}
+
+//For-Of Loop  used to get values (Usually used with arrays and strings.)
 // let str="ApnaCollege";
 // for (let i of str){
 //     console.log("i = ",i);
@@ -62,7 +68,7 @@ while(i<5){
 // } while (i<6);
 
 
-// Operators
+//                                                   Operators
 // 1. Arithmetic Operators
 let x = 10;
 let y = 3;
@@ -70,9 +76,10 @@ console.log("x + y = ", x+y) // Ans = 13
 console.log("x - y = ", x-y) // Ans = 7
 console.log("x * y = ", x*y) // Ans = 30
 console.log("x / y = ", x/y) // Ans = 3.3333333333333335
-console.log("x % y = ", x%y) // Ans = 1 (modulo operator, remainder of division)
-
+console.log("x % y = ", x%y) // Ans = 1 (module operator, remainder of division)
 console.log(5**2) // Ans = 25 (exponentiation operator, 5 raised to the power of 2)
+
+
 // 2. Assignment Operators
 let a1 = 10;
 a1 += 5; // a1 = a1 + 5
@@ -80,6 +87,13 @@ console.log("a1 = ", a1) // Ans = 15
 a1 -= 3; // a1 = a1 - 3
 console.log("a1 = ", a1) // Ans = 12
 a1 *= 2;
+
+let x = 5;
+let y = 2;
+x %= y; // x = x % y
+console.log("x = ", x) // Ans = 1
+
+console.log(two)
 
 // 3. Comparison Operators
 console.log("x > y = ", x>y) // Ans = true
@@ -133,6 +147,7 @@ console.log(Number(true)) // Ans = 1 (true is converted to 1)
 console.log(Number(false)) // Ans = 0 (false is converted to 0)
 
 console.log(Boolean(10)) // Ans = true (non-zero numbers are converted to true)
+console.log(Boolean(-10)) // Ans = true (non-zero numbers are converted to true)
 console.log(Boolean(0)) // Ans = false (zero is converted to false)
 console.log(Boolean("")) // Ans = false (empty string is converted to false)
 console.log(Boolean("Hello")) // Ans = true (non-empty strings are converted to true)
@@ -168,6 +183,10 @@ console.log(null===undefined)
 // 2
 console.log("Rohit" == "Mohit") // Ans = false (here it compare ascii values of characters, 'R' has ascii value 82 and 'M' has ascii value 77)
 
+
+
+
+// Jab bhi 2 different data types ko compare kare ga to inka same type pa ana zaroori ha ,  JS pahle dono ko number ma convert kr de ga.
 
 // ap jab bhi null, strings, boolean ko compare kare ga kisi cheez sa to wo pahle number pa convert hn gyn . <,>,<=,>= ye operators jab bhi null, strings ko compare kare ga to wo pahle number pa convert hn gyn . 
 console.log(null>=0); // Ans = true (null is converted to 0, so the comparison becomes 0 >= 0, which is true)

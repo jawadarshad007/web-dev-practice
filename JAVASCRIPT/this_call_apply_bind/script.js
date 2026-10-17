@@ -15,6 +15,19 @@ y = 20;
 console.log(x,y) // this will throw an error because y is not declared with var, let or const
 
 
+function greeting(name , name){
+    console.log(`Hy ${name} and {name}`)
+}
+greeting("Jawad", "Fawad") // this will throw an error because duplicate parameter names are not allowed in strict mode but in non-strict mode it will work fine and the second parameter will overwrite the first one.
+
+// Correct verison for strict Mode
+function greeting(name1 , name2){
+    console.log(`Hy ${name1} and {name2}`)
+}
+greeting("Jawad", "Fawad")
+
+
+
 
 
 // global object : In browser the global object is 'window', in node.js it is 'global'
@@ -22,11 +35,11 @@ console.log(x,y) // this will throw an error because y is not declared with var,
 console.log(window) // ya browser is ko use karta hai
 
 // globalThis: points to the global object regardless of the environment (browser or node.js)
-console.log(globalThis) // globalThis is a standard way to access the global object in any environment
+console.log(globalThis) // globalThis is a standard way to access the global object in any environment(browser or node.js).
 
 
 
-// this keyword
+//                                          this keyword
 console.log(this)
 // this keyword in global scope(NODE.JS) points to Empty object
 // this keyword in global scope(Browser) points to window object
@@ -83,7 +96,7 @@ greet() // this will be undefined because global object does not have a name pro
 // agr hm chahte function ko donon objects use kr skahn 
 greet.call(user) // yahn pa greet funtion ka this keyword user object ko refer kar raha hai, is liye output hoga "John"
 greet.call(user2) // yahn pa greet funtion ka this keyword user2 object ko refer kar raha hai, is liye output hoga "Alice"
-// incrementAge.call(user, 5) // yahn pa pahle argument jis ko this keword refer kre ga. AND second agrmuent fucntion ke parameter ko refer krta hai.
+// incrementAge.call(user, 5) // yahn pa pahle argument jis ko this keword refer kre ga. AND second agrmuent fucntion ke parameter ko refer krta hai.   
 incrementAge.call(user2, 3, "Bob") 
 incrementAge.apply(user, [2, "Mike"])   // apply method me arguments array ke form me pass krte hai
 const incr = incrementAge.bind(user, 10, "Mohan")  // bind ise waqt call nahi karta, balki ek naya function return karta hai, app is ko bad ma call kr skahte ho.
@@ -116,11 +129,12 @@ console.log(this)
 greet() 
 
 //problem in normal function
+
 const stopwatch = {
     second : 0,
     start : function(){
         setInterval(function(){
-            console.log(this)    // here this points to global object
+            console.log(this)    // here this points to setInterval
             this.second++;
             console.log(this.second) // is fucntion ko setInterval na invoke kia ha , is lia this is ko refer kre ga .
         },1000)
@@ -149,7 +163,7 @@ stopwatch2.start()
 const user00 = {
     name : "Jawad",
     greet : ()=>{
-        console.log(this)// yahn pa ya apne sa baher scope ko dekhe ga yani object sa baher.
+        console.log(this)// yahn pa ya apne sa baher scope ko dekhe ga yani object sa baher. object aik data structure ha na ka block scope is lia wo object sa bahr this dekhe ga .
     }
 }
 user00.greet()

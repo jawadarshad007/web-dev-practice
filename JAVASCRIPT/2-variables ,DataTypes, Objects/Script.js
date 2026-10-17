@@ -1,3 +1,15 @@
+// difference 🧠
+// |                 | `var`    | `let` | `const`      |
+// | --------------- | -------- | ----- | ------------ |
+// | Value change?   | ✅        | ✅     | ❌            |
+// | Dobara declare? | ✅        | ❌     | ❌            |
+// | Scope           | Function | Block | Block        |
+// | Modern JS mein? | ❌ Avoid  | ✅ Use | ✅ Mostly use |
+
+
+
+
+
 console.log("Hello World 2");
 let a = 5;
 let b = 5;
@@ -9,6 +21,7 @@ console.log(a + b);
 }
 console.log(a);
 // to know what type of datatype of variable we use typeof
+// typeof is a built-in JavaScript operator.
 console.log(typeof a, typeof b, typeof c);
 
 // Data Types in JS
@@ -19,6 +32,9 @@ console.log(typeof a, typeof b, typeof c);
 //     d. Undefined
 //     e. Null
 //     f. BigInt
+
+
+let number = 5; // number memory me 8-byte(64-bits) ka space leta hai
 
 let no = 2720984983798237492374398274892n; // BigInt (ye ek naya data type hai jo bohat bade numbers ko store kr sakta hai)
 console.log(no)
@@ -54,6 +70,8 @@ console.log(str) // Ans = Fawad
     //const p; // error aayega kyuki const variable ko bnate hi value deni hoti hai
     let q = undefined;  // undefined=jab koi variable bn jahe or is ma koi value store na ho
     console.log(q)
+
+
 // null
 //     null ka matlab:
 // “Yahan koi value jaan bujh kar nahi hai”
@@ -76,9 +94,19 @@ console.log(str) // Ans = Fawad
 //     a. Objects
 //     b. Arrays
 //     c. Functions
+// JS ma non-primitive data types ka type object hota hai.
 
 
 
+
+let p ={
+    name:"Jawad" ,
+    job: "Web Developer" 
+}
+let p2 = p;
+p2.name = "Fawad";
+console.log(p.name) // Ans = Fawad (kyuki dono p and p2 same memory location ko point kar rahe hain)
+// asa is kia hota ha because in real world objects/arrays kafi data store krte hn(memory zaida use hoti ha) to hum uska reference pass krte hn jese uper p2 ma kia ha
 
 
     let x = "Jawad Bhai";
@@ -99,7 +127,7 @@ console.log(str) // Ans = Fawad
 
    
 
-    // Objects
+    //                                     Objects .......kay value pair 
 
     // JS ma object ka keys ko string ma convert kr deta hai chahe ap keys ko string ma likho ya number ma likho.
 
@@ -112,9 +140,11 @@ console.log(str) // Ans = Fawad
         del: "kuch bhi"
     };
     // read object
-    console.log(obj);
+    console.log(obj);       
+    console.log(obj.is_handsome);
   console.log(obj["job code"]); // Ans = 5600 (kyuki job code me space hai isliye dot notation se access nahi kar sakte, bracket notation se access karna padega)
     console.log(obj.name); // (dot notation se access kar sakte hain)
+
 
     // update object
     obj.new_Entry = "New Value"; // new entry add kr di
@@ -134,27 +164,37 @@ console.log(str) // Ans = Fawad
 
 
     // loops on Objcts 
-    // for in loop (we use it less )
+    // for in loop (we use it less ) for in loop mostly used to get keys/indexes 
+    
     for (let keys in obj){
         console.log(keys, obj[keys])
     }
 
         // Destructuring in Objects....mean extracting values from object and assign them to variables
+        const {is_handsome:Is_Handsome}=obj; // value extract kr ka isko name(variable) dena 
         const {name,["job code"]:jobCode}  = obj;
         console.log(name, jobCode)
 
 
         // using for of loop on objects
-        // for of loop works on iterable objects like arrays, strings, maps, sets etc. but it does not work on objects because objects are not iterable. so we cannot use for of loop directly on objects but we can use it on the array of keys or values of the object using Object.keys() or Object.values() method.
+        // for of loop works on iterable objects like arrays, strings, maps, sets etc. but it does not directly work on objects because objects are not iterable. so we cannot use for of loop directly on objects but we can use it on the array of keys or values of the object using Object.keys() or Object.values() method.
+        
         for (let keys of Object.keys(obj)){
             console.log(keys)
         }  
         for (let values of Object.values(obj)){
             console.log(values)
         }  
-        // for (let entries of Object.entries(obj)){
-        //     console.log(entries)
-        // }  
+        for (let entries of Object.entries(obj)){
+            console.log(entries)
+        }  
+        // Its responce 
+        //  [ 'name', 'Changed Name' ]
+        // [ 'job code', 5600 ]
+        // [ 'is_handsome', true ]
+        // [ 'new_Entry', 'New Value' ]
+
+        // here wo do array destructing 
         for (let [keys,values] of Object.entries(obj)){
             console.log(keys, values)
         }  
@@ -171,6 +211,7 @@ console.log(str) // Ans = Fawad
                 return 20
             }
         }
+        
         let funcValue =user.greet()
         console.log(funcValue)
  
@@ -214,15 +255,16 @@ console.log(str) // Ans = Fawad
                 city: 'Jauharbad',
                 streetNo: 5
             }
-        }
+        }   
         // console.log(student)
         // console.log(student.address)
         // console.log(student.address.city)
 
         // let student2 = student; // is sa student2 and student same object ko refer kr rahn hn.
-        // console.log(student2)
+        // student2.name = "nameChanged";
+        // console.log(student)// Ans = nameChanged (kyuki dono student and student2 same memory location ko point kar rahe hain)
 
-        // but if want ka donon ki separate copy bane than we use separate operator and is ko Shallow copy bhi Kahte hn
+        // but if want ka donon ki separate copy bane than we use spread operator and is ko Shallow copy bhi Kahte hn
         // let student2 = {...student} // ya ap ka nested objects ko alag copy nai banahe ga
         // student2.name = "nameChanged";
         // student2.address.city = "Lahore"
@@ -232,22 +274,26 @@ console.log(str) // Ans = Fawad
 
         // To make complete separate copy of objects we use deep copy and is ke liye hum
         // structuredClone() method ka use karte hn
-        let student2 =  structuredClone(student)
-        student2.name = "nameChanged";
-        student2.address.city = "Lahore"
+        let student3 =  structuredClone(student)
+        student3.name = "nameChanged";
+        student3.address.city = "Lahore"
         console.log(student)
-        console.log(student2)
+        console.log(student3)
 
 
         // Limitations of a structured clone : It CANNOT clone:
 // - Functions: It will throw a `DataCloneError`. Functions have a "scope" and are not considered simple data.
         const original = {
         name: "Alice",
-  sayHi: function() { console.log("Hi"); }
+        sayHi: function(){ 
+         console.log("Hi"); 
+
+        }
 };
 
 let original2 = structuredClone(original)
 console.log(original2)
+
 
 // try {
 //   const clone = structuredClone(original);
@@ -261,7 +307,7 @@ console.log(original2)
 
 
 
-// JS keys ko string ma convert kr deta hai chahe ap keys ko string ma likho ya number ma likho. After the update of 2025, now keys are also treat in symbols 
+// JS keys ko string ma convert kr deta hai chahe ap keys ko string ma likho ya number ma likho. After the update of 2015, now keys are also treat in symbols 
 
 // Symbol ek primitive data type hai, bilkul string, number, boolean ki tarah — lekin unique hota hai.
 // Its main Purpose:
@@ -277,7 +323,7 @@ const user3 = {
     age: 25,
     0 : 100,
     4: 500,
-    [sym]:"this is symbol"
+    [sym]:"this is symbol"  
 }
 console.log(user3[0])
 console.log(user3[sym])
@@ -299,7 +345,7 @@ console.log(user3[sym])
 
    
 
-
+// We already know 
 
 
     //practice qs
@@ -338,3 +384,17 @@ console.log("Sleep meaning is:",sleep)
 
 
 
+
+let obj3 = {
+    name: "Jawad",
+    age: 22,
+    address: {
+        city: "Jauharabad",
+        streetNo: 5
+    }
+}
+let shallowCopy = {...obj3} // shallow copy
+obj3.name = "Fawad"
+obj3.address.city = "Lahore"
+console.log(shallowCopy) // Ans = { name: 'Jawad', age: 22, address: { city: 'Lahore', streetNo: 5 } } (kyuki shallow copy ma nested object ka reference same hota hai)
+console.log(shallowCopy) // Ans = { name: 'Fawad', age: 22, address: { city: 'Lahore', streetNo: 5 } }

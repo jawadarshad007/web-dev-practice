@@ -2,8 +2,8 @@
 const now = new Date();
 console.log(now);// it will print the current date and time of uct time zone, in Pakistan it is 5 hours ahead of uct time zone
 console.log(typeof now)
-console.log(now.toString()) // it will print the date in string format
-console.log(now.toISOString())// it will print the date in ISO format
+console.log(now.toString()) // it will print the date in string format according to Ur time
+ console.log(now.toISOString())// it will print the date in ISO format
 console.log(now.toLocaleString())// it will print the date in local format
 console.log(now.getDay()); // it will print the day of the week (0-6) 0 is Sunday and 6 is Saturday
 console.log(now.getDate()); // it will print the day of the month (1-31)
@@ -30,3 +30,8 @@ const timestamp = Date.now();
 const utcTime = new Date(timestamp)
 console.log(timestamp) // it will print the current timestamp in milliseconds since January 1, 1970
 console.log(utcTime)// it will print the current date and time in UTC time zone
+
+
+
+
+
