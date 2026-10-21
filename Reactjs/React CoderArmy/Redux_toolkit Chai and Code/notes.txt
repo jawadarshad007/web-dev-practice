@@ -1,0 +1,22 @@
+Redux
+it is a state management library and - Alternative of prop drilling (prop drilling was a headache)
+
+React-redux
+to implemnt redux in react , here comes React-redux
+
+(Both are independent libraries )
+redux independent hone ki waja sa sab ka sath kaam krte ha like React, vue or other any JS framework
+
+
+Redux toolkit is a modiied and optimizes version of Redux
+
+
+for use ReduxToolkit :
+1)npm install @reduxjs/toolkit
+2)npm install react-redux
+
+
+first congfigure store (Every Application has one Store)
+than make reducers(slicing)
+for add things useDispatch()
+for fetching things useSelector
