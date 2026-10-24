@@ -8,16 +8,21 @@ function App() {
   const [role, setRole] = useState('')
   const [desc, setDesc] = useState('')
 
-  const [allUsers, setAllUsers] = useState([])
+  const localData =  JSON.parse(localStorage.getItem("all-Users")) || []
+  console.log(localData)
+
+  const [allUsers, setAllUsers] = useState(localData)
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // const oldUsers = [...allUsers]
-    // oldUsers.push({ name, imageUrl, role, desc })
-    // setAllUsers(oldUsers)
+    const oldUsers = [...allUsers]  
+    oldUsers.push({ name, imageUrl, role, desc })
+    setAllUsers(oldUsers)
 
-    setAllUsers([...allUsers , { name, imageUrl, role, desc }])
+    // setAllUsers([...allUsers , { name, imageUrl, role, desc }])
+
+    localStorage.setItem("all-Users" , JSON.stringify(oldUsers) )
 
     console.log(allUsers)
 
@@ -29,8 +34,17 @@ function App() {
 
   const handleDelete = (idx)=>{
     const copyUsers = [...allUsers]
-    copyUsers.splice(idx , 1);
+    const conf = confirm("Are U really want to delete this element?")
+    if (conf){
+      copyUsers.splice(idx , 1);
+    }
+    else{
+      alert("Element not deleted")
+    }
+
+    
     setAllUsers(copyUsers);
+    localStorage.setItem("all-Users" , JSON.stringify(copyUsers))
     
   }
 
