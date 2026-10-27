@@ -1,0 +1,13 @@
+/* @import "tailwindcss"; */
+
+
+.sale{
+    background-color: rgb(107, 14, 14);
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.sale p{
+    flex-shrink: 0;
+}

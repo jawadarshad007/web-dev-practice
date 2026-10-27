@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Dashboard from './components/Dashboard'
@@ -20,6 +20,18 @@ import NotFound from './components/NotFound'
 // Jab user /about URL par jaye, to About page show hona chahiye. Is kaam ke liye React ma commonly React Router library use hoti hai.
 // npm i react-router-dom
 
+// Types of Routers
+  // -BrowserRouter(used 99.9%)
+          // -it uses History API
+          // Provide clean URLs
+          // Used by Modern apps 
+          // Need server Configurations
+          // Good for SEO
+  // Hash Router
+          // contains # like /courses/#/about
+          // Used in older Browsers
+          // No SEO
+
 const router = createBrowserRouter([
   // these below are routes , here we create different router
   {
@@ -31,7 +43,7 @@ const router = createBrowserRouter([
     </>   
   },
   {
-    path:"/about",
+    path:"/about",  
     element:<>
     <Navbar></Navbar>
     <About/>
@@ -62,7 +74,7 @@ const router = createBrowserRouter([
     ]
   },
   {
-    // Route Paramerter
+    // Route Paramerter (here we create dynamic routes)
     path: "/student/:id",
     element:
     <>
@@ -84,7 +96,7 @@ function App() {
 
   return (
     <>
-    {/* yahn hm React ko routes ka contet provde kr rahn hn  */}
+    {/* yahn hm React ko routes ka context provde kr rahn hn  */}
     <RouterProvider router={router}/>
     {/* <Navbar/> */}
     </>

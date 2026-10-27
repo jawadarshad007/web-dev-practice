@@ -17,7 +17,8 @@ function App() {
 // jo state hm na Body ka child Counter.jsx ma banahi thi count name ki , ab wo hmm App.jsx ma banahn gyn taake ya sab ko share kr skahn , isse ko hm state lifting kahte hn , ka hn na state lift kr di ha 
 
 // yahn pa hme aik issue face krna parh rha ha wo ha prop drilling , mean aik component sa dosare component ma and is sa 3sre component ma props pass ho rahn hn. Jis sa state change hone pr ya sab components render hn gyn 
-// is issue ko hal krne ka lia ata ha useContext Hook
+// is issue ko hal krne ka lia ata ha Context API useContext Hook
+//Context API is used for data centralization
 //useContext hook ap ka lia context create kre ga , is ma 2 cheezen ate hn 
 //  i) CreateContexxt ii) useContext
 // useContext hme prop drilling sa bachata ha
