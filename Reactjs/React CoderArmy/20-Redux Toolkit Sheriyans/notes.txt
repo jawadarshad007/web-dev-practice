@@ -1,0 +1,45 @@
+React ma state management aik bth bara issue tha , ise ka solution ma Redux aya.
+
+
+
+
+Redux
+It is a independent state management library and - Alternative of prop drilling (prop drilling was a headache)
+It helped to centralized data
+Redux ka kuch drawbacks thi 
+   i)Syntax very difficuit
+   ii)Long boilerplate
+   iii)Setup is very time taking
+
+
+Than here comes Redux toolkit, it is a modiied and optimizes version of Redux
+
+                  Redux toolkit Architecture:
+1)Store: Aik centralized jaga ha jahn data rakha hoa ha, jis ko chaiya ho ga la laaa ga 
+2)Reducer: Redux store ma hm reducer banate hn, jis ma logic likha hota ha. Yeh wo functions hain jo define karte hain ke state mein kis tarah ki changes krne hain.
+3)Slice:
+
+
+ Simple words mein, slice aapke kisi ek feature ke data aur us data ko update karne ke rules ka collection hai.
+
+
+
+
+React-redux
+to implemnt redux in react , here comes React-redux
+
+(Both are independent libraries )
+redux independent hone ki waja sa sab ka sath kaam krte ha like React, vue or other any JS framework
+
+
+Context API aur Redux Toolkit dono global state manage kar sakte hain. Redux Toolkit har situation mein better nahi hota; choice application ki complexity par depend karti hai.
+
+for use ReduxToolkit :
+1)npm install @reduxjs/toolkit
+2)npm install react-redux
+
+
+first congfigure store (Every Application has one Store)
+than make reducers(slicing)
+for add things useDispatch()
+for fetching things useSelector
