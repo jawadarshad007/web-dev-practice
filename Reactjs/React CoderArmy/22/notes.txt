@@ -1,0 +1,15 @@
+Project Name : Team Sync
+, in this we follow Feature Based Folder Structure in React.
+
+
+
+Two types of Folder Structure in React:
+1)Layer Based Folder Structure: jis ma tamam components aik separate folder ma hotn hn and tamam pages aik separate folder ma hotn hn and jitne bhi service files hotn hn wo separate folder ma hotn hn.
+-This folder structure suits best in small application but not good for complex applications where no of components are 400 to 500 , no of pages are 100 to 200 etc....
+
+
+
+2)Feature Based Folder Structure in React
+    Used in Complex Projects
+    Is ma har aik Feature ka separate folder hota ha like Dashboard ka aik separate folder ho ga , authentication ka separate folder ho ga.
+    Agar aik functionality ka use multiple Features ko ha like aik api ha jo multiple Feature ma use hone ha to isko hm shared folder ma rakhn gyn.
