@@ -17,10 +17,7 @@ Than here comes Redux toolkit, it is a modiied and optimizes version of Redux
                   Redux toolkit Architecture:
 1)Store: Aik centralized jaga ha jahn data rakha hoa ha, jis ko chaiya ho ga la laaa ga 
 2)Reducer: Redux store ma hm reducer banate hn, jis ma logic likha hota ha. Yeh wo functions hain jo define karte hain ke state mein kis tarah ki changes krne hain.
-3)Slice:
-
-
- Simple words mein, slice aapke kisi ek feature ke data aur us data ko update karne ke rules ka collection hai.
+3)Slice: Simple words mein, slice aapke kisi ek feature ke data aur us data ko update karne ke rules ka collection hai.
 
 
 

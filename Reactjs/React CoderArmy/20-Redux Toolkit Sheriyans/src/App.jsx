@@ -8,6 +8,7 @@ const App = () => {
 
    // dispatch reducer ka use krte hoe store ma value add krta ha 
   const dispatch = useDispatch()
+  // for fetching things useSelector
   const count = useSelector((state)=> state.counter.value)
 
   return (

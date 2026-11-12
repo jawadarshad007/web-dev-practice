@@ -1,5 +1,7 @@
 Project Name : Team Sync
-, in this we follow Feature Based Folder Structure in React.
+ya aik CMS(Client Management System) ha.
+in this we follow Feature Based Folder Structure in React.
+
 
 
 
@@ -13,3 +15,5 @@ Two types of Folder Structure in React:
     Used in Complex Projects
     Is ma har aik Feature ka separate folder hota ha like Dashboard ka aik separate folder ho ga , authentication ka separate folder ho ga.
     Agar aik functionality ka use multiple Features ko ha like aik api ha jo multiple Feature ma use hone ha to isko hm shared folder ma rakhn gyn.
+
+    is ma hr feature ka ander 4 Layers hotn hn 1)ui 2)hooks 3)state 4)apis
