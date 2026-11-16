@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Network, Cloud, SquareTerminal, LogIn } from "lucide-react";
+import { useAuth } from "../../hooks/useAuth";
 
 /* faint decorative tile in the bottom-right corner */
 function SwirlTile() {
@@ -65,23 +66,25 @@ const socialClass =
   "text-sm font-semibold uppercase tracking-wide text-zinc-200 transition hover:bg-[#323137]";
 
 export default function Login() {
-  const [done, setDone] = useState(false);
+  // const [done, setDone] = useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm({
-    mode: "onSubmit",
-    defaultValues: { email: "", password: "", remember: false },
-  });
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors, isSubmitting },
+  // } = useForm({
+  //   mode: "onSubmit",
+  //   defaultValues: { email: "", password: "", remember: false },
+  // });
 
-  const onSubmit = async (data) => {
-    // replace with your API call
-    await new Promise((r) => setTimeout(r, 800));
-    console.log("Login payload:", data);
-    setDone(true);
-  };
+  // const onSubmit = async (data) => {
+  //   // replace with your API call
+  //   await new Promise((r) => setTimeout(r, 800));
+  //   console.log("Login payload:", data);
+  //   setDone(true);
+  // };
+
+  let {register,handleSubmit,onLoginSubmit,errors,isSubmitting,done,navigate} = useAuth()
 
   return (
     <div
@@ -130,7 +133,7 @@ export default function Login() {
             <span className="h-px flex-1 bg-white/10" />
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} noValidate>
+          <form onSubmit={handleSubmit(onLoginSubmit)} noValidate>
             {/* email */}
             <label htmlFor="email" className="mb-2.5 block px-1 text-[13px] font-semibold uppercase tracking-wider text-zinc-300">
               Email address
@@ -213,9 +216,9 @@ export default function Login() {
 
           <div className="mt-9 border-t border-white/10 pt-8 text-center text-[15px] text-zinc-300">
             Don&apos;t have an account?{" "}
-            <a href="/signup" className="font-semibold text-violet-300 hover:underline">
+            <span onClick={()=> navigate("/register")} className="font-semibold text-violet-300 hover:underline cursor-pointer">
               Sign Up
-            </a>
+            </span>
           </div>
         </div>
 

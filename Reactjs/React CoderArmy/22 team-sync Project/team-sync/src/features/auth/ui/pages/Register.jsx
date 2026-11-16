@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { User, Mail, Lock, Eye, EyeOff, Sparkles, Network } from "lucide-react";
+import { useAuth } from "../../hooks/useAuth";
 
 /* ---------- password strength ---------- */
 const STRENGTH_LABELS = ["", "Weak password", "Fair password", "Good password", "Strong password"];
@@ -105,28 +106,31 @@ function GoogleIcon() {
 
 /* ---------- page ---------- */
 export default function SignUp() {
-  const [showPw, setShowPw] = useState(false);
-  const [submitted, setSubmitted] = useState(null);
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors, isSubmitting },
-  } = useForm({
-    mode: "onSubmit",
-    defaultValues: { fullName: "", email: "", password: "", terms: false },
-  });
+  // const [showPw, setShowPw] = useState(false);
+  // const [submitted, setSubmitted] = useState(null);
 
-  const password = watch("password");
-  const strength = getStrength(password);
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   watch,
+  //   formState: { errors, isSubmitting },
+  // } = useForm({
+  //   mode: "onSubmit",
+  //   defaultValues: { fullName: "", email: "", password: "", terms: false },
+  // });
 
-  const onSubmit = async (data) => {
-    // replace with your API call
-    await new Promise((r) => setTimeout(r, 800));
-    setSubmitted(data);
-    console.log("Sign up payload:", data);
-  };
+  
+  // const strength = getStrength(password);
+  
+  // const onSubmit = async (data) => {
+    //   // replace with your API call
+    //   await new Promise((r) => setTimeout(r, 800));
+    //   setSubmitted(data);
+    //   console.log("Sign up payload:", data);
+    // };
+    let {register,handleSubmit,watch,onRegisterSubmit,errors,isSubmitting,showPw,submitted,navigate} = useAuth();
+    const password = watch("password");
 
   return (
     <div className="min-h-screen bg-[#131118] font-sans text-zinc-100" style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}>
@@ -169,7 +173,7 @@ export default function SignUp() {
             <h1 className="text-[40px] font-bold leading-tight tracking-tight">Create your account</h1>
             <p className="mt-3 text-lg text-zinc-300">Experience the future of collaborative data intelligence.</p>
 
-            <form onSubmit={handleSubmit(onSubmit)} noValidate className="mt-12 space-y-8">
+            <form onSubmit={handleSubmit(onRegisterSubmit)} noValidate className="mt-12 space-y-8">
               {/* Full name */}
               <Field label="Full Name" icon={User} htmlFor="fullName" error={errors.fullName?.message}>
                 <input
@@ -320,9 +324,9 @@ export default function SignUp() {
 
             <p className="mt-14 text-center text-lg text-zinc-300">
               Already have an account?{" "}
-              <a href="/login" className="font-semibold text-violet-300 hover:underline">
+              <span onClick={()=> navigate("/")}  className="font-semibold text-violet-300 hover:underline cursor-pointer">
                 Log In
-              </a>
+              </span>
             </p>
           </div>
         </main>
