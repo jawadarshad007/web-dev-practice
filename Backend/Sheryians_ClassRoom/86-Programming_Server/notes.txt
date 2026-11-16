@@ -1,0 +1,14 @@
+Port No:
+ap ka OS hr aik operation ko port number deta ha, and is port no ka through is operation sa hm communicate kr skahte hn
+
+hm apni mrze ka port no nai da skahete , because ho skahta ha jo hm port no apni marzi ka dhn wo already koi operation use kr raha ho
+commonly jo ports availble hotn hn:  3000 5173 7000 8000 
+
+
+nodemon Command: hme br br server ko restart krne ki need nai hoti 
+
+
+
+npm vs npx
+npm (Node Package Manager): Installs, updates, and manages dependencies in your project or globally
+npx (Node Package Execute): Executes Node package binaries directly.
