@@ -1,0 +1,54 @@
+API:
+    An API (Application Programming Interface) is a set of rules and protocols that allows two different software applications to communicate and share data with each other
+    like your instagram Application communicate with instagram server with rules and protocols.
+                or 
+    instagram server communicates with facebook server with rules and protocols.
+
+    ya rules and protocols API ki type pa depend krta ha.
+
+
+REST APIS:  
+REST(Representational State Transfer) API ek architectural style hai jiske kuch rules aur principles hain. In rules ko follow karte hue hum APIs design karte hain.
+
+REST API generally HTTP or HTTPS  protocol use karti hai.
+Iska matlab frontend HTTP requests ke through backend se data:
+- Fetch kar sakta hai.
+- Create kar sakta hai.
+- Update kar sakta hai.
+- Delete kar sakta hai.
+
+
+HTTP Methods (Most Important)
+REST API mein 5 common HTTP methods use hote hain:
+1) GET
+Data retrieve karna
+Server se data lene ke liye.
+Example: Users ki list fetch karna
+2)POST
+New data create karna
+Server par naya data send karne ke liye.
+Example: New user register karna.
+3)PUT
+server pr majood data ko completely new data sa replace karna
+4)PATCH
+server par majood data ko Update karna
+Example: User ka name update karna.
+5)DELETE
+Data delete karna
+Example: User delete karna.
+
+In operations ko collectively CRUD kehte hain:
+Operation	HTTP Method
+Create	    POST
+Read    	GET
+Update  	PUT / PATCH
+Delete	    DELETE      
+
+
+
+
+JSON:
+    JSON stands for JavaScript Object Notation.
+    the communication between frontend and backend is in JSON format 
+
+    JSON is a lightweight format used to store and exchange data between applications, servers, and APIs.
