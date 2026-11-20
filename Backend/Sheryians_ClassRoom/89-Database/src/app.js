@@ -4,7 +4,7 @@ const app = express()
 
 app.use(express.json())
 
-const notes = []
+const notes = []  // ya apni value RAM ma store kr rha ha , and server jab bhi restart hoga to ye value delete ho jayegi , isliye hum database use krte ha
 
 
 
@@ -12,7 +12,7 @@ app.post("/notes",(req,res)=>{
     notes.push(req.body)
    
     //  HTTP Status Codes: Servers use HTTP status codes to indicate the outcome of a client's request  .
-    // APi ka res hamasaha json format ma jana chaiya
+    // APi ka responce hamasaha json format ma jana chaiya
     res.status(201).json({
         message: "Note created successfully"
     })

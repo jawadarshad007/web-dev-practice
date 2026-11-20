@@ -1,0 +1,22 @@
+Cluster => COmbination of two things storage + processor
+aik Cluster ka andr bth sare database ho skahte hn.
+Data store hota ha database ka andr, database create hota ha cluster kr andr and aik cluster multiple database create kr skahte ha.
+
+
+Cloud services we use is Mongodb Atlas
+
+Types of Servers:
+    1) Web server , jo ma express ki help sa create krte hn
+
+    2) Database server , jo Mongodb na world ma kafi jaaga bana rkahe hn 
+
+
+
+Latency : time taken by data to travel from one point to another point
+
+Hme database ko bth zaida secure rakhna parhta ha , is ka hm 2Layer security use krte hn
+in mongodb atlas we use 2-layer security 
+1)Database Users
+
+ 2)Network access(IP acccess)
+Network acccess ma hm ya define krte ka kn sa IP address ya range of IP address ko database access krne ki permission ha , or baki sab ko access deny kr dete hn
