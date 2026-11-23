@@ -1,0 +1,12 @@
+Jawad    pfFVC02rBJBoormv    role = admin
+
+
+
+// url connects cluster to compass
+mongodb+srv://Jawad:pfFVC02rBJBoormv@cluster0.5zni9bn.mongodb.net/
+here mongodb+srv =  it is a protocol used for communication
+
+
+// Schema
+Database ka rule ha data store krne ka lia , ka isko pahle batana parhe ga ka app data kis format ka store krne wale ha , ise process ko hm bolte han schema create krna.
+isko hm models folder ma create krte hn
