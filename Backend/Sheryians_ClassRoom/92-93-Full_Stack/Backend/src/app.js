@@ -1,9 +1,11 @@
 const express = require("express")
 const noteModel = require("./models/note.model")
+const cors = require("cors")
 
 
 const app = express()
 app.use(express.json())
+app.use(cors())// is sa app ka server cross origin request ko accept kr leta ha, mean koi dosari website ap ki website pr request kr skahte ha
 
 app.post("/api/notes",async (req,res)=>{
     const {title, description} = req.body;
