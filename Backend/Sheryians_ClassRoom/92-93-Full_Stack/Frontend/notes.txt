@@ -1,0 +1,5 @@
+npm run build --------
+    frontend folder ka andr ap na jitna bhi code likha ho ga(React ma), is ko ya dist folder ma daal deta ha 3-files ka andr html,css,js.
+    In 3 files ka andr frontend ka React ka complete code/logic present hota ha.
+
+Than ap production deployment ka lia, is frontend ka dist folder ko backend ka public folder ma paste kr datee hn. 

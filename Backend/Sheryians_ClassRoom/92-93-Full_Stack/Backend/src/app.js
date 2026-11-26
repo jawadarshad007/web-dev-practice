@@ -7,7 +7,7 @@ const path = require("path")
 const app = express()
 app.use(express.json())
 app.use(cors())// is sa app ka server cross origin request ko accept kr leta ha, mean koi dosari website ap ki website pr request kr skahte ha
-app.use(express.static("./public")) //ya public folder ka files ko publicaly avaiable bana deta ha , is ka pass jab index.html file jo ka public folder ka andr parhe ha wo request krte ha like http://localhost:3000/assets/index-BpEtEHq6.js  , ya dekhe ga ka public folder andr assets/index ki file ha ka nai , mil jane pr ise render krwahe ga 
+app.use(express.static("./public")) //ya public folder ka files ko publicaly avaiable bana deta ha,mean user public folder ki files ko directly use kr skahte ha, is ka pass jab index.html file jo ka public folder ka andr parhe ha wo request krte ha like http://localhost:3000/assets/index-BpEtEHq6.js  , ya dekhe ga ka public folder andr assets/index ki file ha ka nai , mil jane pr ise render krwahe ga 
 
 app.post("/api/notes",async (req,res)=>{
     const {title, description} = req.body;
